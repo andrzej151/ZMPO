@@ -8,9 +8,14 @@ class Zamowienie
         Zamowienie();
         virtual ~Zamowienie();
 
+
     protected:
 
     private:
+
+        Potrawa [] lista; // zmienic na araylist lub dynamiczne
+
+
 };
 
 #endif // ZAMOWIENIE_H
