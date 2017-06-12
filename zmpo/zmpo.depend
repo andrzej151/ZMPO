@@ -1,4 +1,17 @@
 # depslib dependency file v1.0
-1495978294 source:x:\studia\sem4\zmpo\zmpo\zmpo\main.cpp
+1497220232 source:x:\studia\sem4\zmpo\zmpo\zmpo\main.cpp
 	<iostream>
+	<cstdlib>
+
+1497220253 x:\studia\sem4\zmpo\zmpo\zmpo\include\lanczyk.h
+
+1497219869 x:\studia\sem4\zmpo\zmpo\zmpo\include\kolejka.h
+	<iostream>
+	<cstdio>
+
+1497219951 source:x:\studia\sem4\zmpo\zmpo\zmpo\src\kolejka.cpp
+	"kolejka.h"
+
+1497220263 source:x:\studia\sem4\zmpo\zmpo\zmpo\src\lanczyk.cpp
+	"Lanczyk.h"
 
