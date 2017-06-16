@@ -8,7 +8,6 @@ class Zamowienie
         Zamowienie();
         virtual ~Zamowienie();
 
-
     protected:
 
     private:
