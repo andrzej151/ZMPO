@@ -8,7 +8,7 @@ class Pozycja
         Pozycja();
         virtual ~Pozycja();
         strumien zapisz(strumien);
-        strumien wczytaj(strumien)
+        strumien wczytaj(strumien);
 
     protected:
 
@@ -17,6 +17,8 @@ class Pozycja
         int id;
         float cena;
         Time czas
+
+
 };
 
 #endif // POZYCJA_H

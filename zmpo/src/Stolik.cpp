@@ -2,10 +2,20 @@
 
 Stolik::Stolik()
 {
-    //ctor
+    czyWolny = true;
 }
 
 Stolik::~Stolik()
 {
-    //dtor
+    //nothing
+}
+
+Stolik::zmienStan()
+{
+    czyWolny = !czyWolny;
+}
+
+Stolik::pokazStan()
+{
+    return czyWolny;
 }

@@ -1,0 +1,44 @@
+//TODO
+Dyskusje w tym pliku;
+
+03:08 16.06.2017 Mateusz
+Zauwazylem, ze kolejka jest dziwnie zaimplementowana, w .h jest wszystko
+Znajdz ten sposob na zapisywanie do pliku i dodaj go lub chociaz tutaj wpisz
+Zostawiam tutaj gotoxy, moze w mainie uzyjemy;
+
+
+#include <iostream>
+#include <windows.h>
+using namespace std;
+void Game::gotoxy(short x, short y) {
+	COORD c;
+	c.X = x;
+	c.Y = y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);}
+
+
+Tutaj zostawie moja metode do robienia przerw w odczycie;
+
+
+while(...){
+unsigned long now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+//kod
+short time = now + delay - std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+Sleep(time);}
+
+
+Tutaj zostawiê moj¹ metodê do pobierania przycisku;
+
+
+while (hit != 13 || decision != 0){
+    if (_kbhit()) {
+        hit = _getch();
+        switch (hit) {
+        case 'W': ... break;
+        case 13 : ... break;}
+    Sleep(...);}
+
+
+Stolik : Zapisujemy tylko ilosc stolików do pliku.
+
+Nie zapominaj zapisywac calego projektu, bo jak otworzylem, to w "src" i "include" byly tylko po 2 pliki
