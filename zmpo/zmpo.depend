@@ -4,6 +4,8 @@
 	<stdio.h>
 	<conio.h>
 
+1497277387 
+
 1497277387 x:\studia\sem4\zmpo\zmpo\zmpo\include\lanczyk.h
 
 1497277387 x:\studia\sem4\zmpo\zmpo\zmpo\include\kolejka.h
@@ -13,6 +15,20 @@
 1497277387 source:x:\studia\sem4\zmpo\zmpo\zmpo\src\kolejka.cpp
 	"kolejka.h"
 
+1497277387 "
+
 1497277387 source:x:\studia\sem4\zmpo\zmpo\zmpo\src\lanczyk.cpp
 	"Lanczyk.h"
+
+1497273787 source:/media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/src/kolejka.cpp
+	"kolejka.h"
+
+1497273787 /media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/include/kolejka.h
+	<iostream>
+	<cstdio>
+
+1497273787 source:/media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/src/Lanczyk.cpp
+	"Lanczyk.h"
+
+1497273787 /media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/include/Lanczyk.h
 
