@@ -7,9 +7,10 @@ class Stolik
     public:
         Stolik();
         virtual ~Stolik();
+        void edytuj();
 
-        void zmienStan();
-        bool pokazStan();
+        void setStan(bool);
+        bool getStan();
 
     protected:
 

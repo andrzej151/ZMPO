@@ -10,12 +10,19 @@ Stolik::~Stolik()
     //nothing
 }
 
-Stolik::zmienStan()
+Kelner::edytuj()
 {
-    czyWolny = !czyWolny;
+    //TODO tu cos prostego
+    cin << stan;
+    setStan(stan);
 }
 
-Stolik::pokazStan()
+Stolik::setStan(bool czyWolny)
+{
+    this -> czyWolny = czyWolny;
+}
+
+Stolik::getStan()
 {
     return czyWolny;
 }

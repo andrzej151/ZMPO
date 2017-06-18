@@ -3,6 +3,11 @@
 
 #include <stdio.h>
 #include <conio.h>
+#include <vector>
+
+#include "Kucharz.h"
+#include "Kelner.h"
+#include "Stolik.h"
 
 class main
 {
@@ -13,16 +18,23 @@ class main
     protected:
 
     private:
-        void dodajKucharza();
-        void edytujKucharza();
-        void usunKucharza();
+        vector<Kucharz> kucharze;
+        void dodajKucharza(Kucharz);
+        void pokazKucharza(int);
+        void edytujKucharza(int);
+        void usunKucharza(int);
 
-        void dodajKelnera();
-        void edytujKelnera();
-        void usunKelnera();
+        vector<Kelner> kelnerzy;
+        void dodajKelnera(Kelner);
+        void pokazKelnera(int);
+        void edytujKelnera(int);
+        void usunKelnera(int);
 
-        void dodajStolik();
-        void usunStolik(int id);
+        vector<Stolik> stoliki;
+        void dodajStolik(Stolik);
+        void pokazStolik(int);
+        void edytujStolik(int);
+        void usunStolik(int);
 };
 
 #endif // MAIN_H
