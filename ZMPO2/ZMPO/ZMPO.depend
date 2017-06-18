@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1497814959 source:/media/andrzej/Dane/studia/sem4/ZMPO/ZMPO2/ZMPO/main.cpp
+	<iostream>
+	<string>
+	<queue>
+	"Produkt.h"
+
+1497812228 source:/media/andrzej/Dane/studia/sem4/ZMPO/ZMPO2/ZMPO/src/Kolejka.cpp
+	"Kolejka.h"
+
+1497811828 /media/andrzej/Dane/studia/sem4/ZMPO/ZMPO2/ZMPO/include/Kolejka.h
+
+1497814603 /media/andrzej/Dane/studia/sem4/ZMPO/ZMPO2/ZMPO/include/Produkt.h
+	<iostream>
+	<string>
+
