@@ -1,11 +1,10 @@
+#include <iostream>
+#include <string>
 #include "Menu.h"
 
-Menu::Menu()
+int main()
 {
-    //ctor
-}
+    cout<<"helo"<<endl;
+    return 0;
 
-Menu::~Menu()
-{
-    //dtor
 }

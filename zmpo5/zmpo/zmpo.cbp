@@ -13,7 +13,6 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -23,7 +22,6 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -34,28 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Comments.txt" />
-		<Unit filename="include/Kelner.h" />
-		<Unit filename="include/Kucharz.h" />
-		<Unit filename="include/Menu.h" />
-		<Unit filename="include/Pozycja.h" />
-		<Unit filename="include/Stolik.h" />
-		<Unit filename="include/Zamowienie.h" />
-		<Unit filename="include/kolejka.h" />
-		<Unit filename="include/main.h" />
-		<Unit filename="src/Kelner.cpp" />
-		<Unit filename="src/Kucharz.cpp" />
-		<Unit filename="src/Menu.cpp" />
-		<Unit filename="src/Pozycja.cpp" />
-		<Unit filename="src/Stolik.cpp" />
-		<Unit filename="src/Zamowienie.cpp" />
-		<Unit filename="src/kolejka.cpp" />
-		<Unit filename="src/main.cpp" />
+		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
-			<envvars />
 			<debugger />
-			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
