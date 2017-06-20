@@ -4,26 +4,29 @@
 	<stdio.h>
 	<conio.h>
 
-1497277387 
+1497273787 
 
 1497277387 x:\studia\sem4\zmpo\zmpo\zmpo\include\lanczyk.h
 
-1497277387 x:\studia\sem4\zmpo\zmpo\zmpo\include\kolejka.h
+1497857254 x:\studia\sem4\zmpo\zmpo\zmpo\include\kolejka.h
 	<iostream>
 	<cstdio>
 
-1497277387 source:x:\studia\sem4\zmpo\zmpo\zmpo\src\kolejka.cpp
+1497857254 source:x:\studia\sem4\zmpo\zmpo\zmpo\src\kolejka.cpp
 	"kolejka.h"
 
-1497277387 "
+1497273787 "
 
 1497277387 source:x:\studia\sem4\zmpo\zmpo\zmpo\src\lanczyk.cpp
 	"Lanczyk.h"
 
-1497273787 source:/media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/src/kolejka.cpp
+1497853654 source:/media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/src/kolejka.cpp
+	"kolejka.h"
 	"kolejka.h"
 
-1497273787 /media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/include/kolejka.h
+1497853654 /media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/include/kolejka.h
+	<iostream>
+	<cstdio>
 	<iostream>
 	<cstdio>
 
@@ -31,4 +34,45 @@
 	"Lanczyk.h"
 
 1497273787 /media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/include/Lanczyk.h
+
+1497853674 source:/media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/src/Kelner.cpp
+	"Kelner.h"
+
+1497861978 /media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/include/Kelner.h
+
+1497853674 source:/media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/src/Kucharz.cpp
+	"Kucharz.h"
+
+1497861996 /media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/include/Kucharz.h
+
+1497862023 source:/media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/src/main.cpp
+	"main.h"
+
+1497854404 /media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo/include/main.h
+	<iostream>
+	<string>
+
+1497857274 source:x:\studia\sem4\zmpo\zmpo\zmpo\src\kelner.cpp
+	"Kelner.h"
+
+1497865578 x:\studia\sem4\zmpo\zmpo\zmpo\include\kelner.h
+
+1497857274 source:x:\studia\sem4\zmpo\zmpo\zmpo\src\kucharz.cpp
+	"Kucharz.h"
+
+1497865596 x:\studia\sem4\zmpo\zmpo\zmpo\include\kucharz.h
+
+1497865623 source:x:\studia\sem4\zmpo\zmpo\zmpo\src\main.cpp
+	"main.h"
+
+1497858004 x:\studia\sem4\zmpo\zmpo\zmpo\include\main.h
+	<iostream>
+	<string>
+
+1497964966 source:x:\studia\sem4\zmpo\zmpo\zmpo\src\menu.cpp
+	<iostream>
+	<string>
+	"Menu.h"
+
+1497865655 x:\studia\sem4\zmpo\zmpo\zmpo\include\menu.h
 

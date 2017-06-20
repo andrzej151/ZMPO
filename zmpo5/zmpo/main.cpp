@@ -213,21 +213,21 @@ TKolejkaPriorytetowaOsob kolejkaPriorytetowa;
         decyzja = menu();
     }while(decyzja!=0);
     wczytaj();
-/*
+
     int b=0;
     Pozycja t[] = {  Pozycja("Pizza",1,100,19.33), Pozycja("Pizza",1,100,19.33),
     Pozycja("Pizza",1,100,19.33), Pozycja("Pizza",1,100,19.33),  };
-        cin>>t[1];
+        //cin>>t[1];
         ofstream plik("plik.txt");
-        cin>>b;
-
-
-
+      //  cin>>b;
 
 
     for (int i = 0; i < 4; i++)
-        plik << t[i] << endl;
+    {
 
+        cout << t[i] << endl;
+        plik << t[i] << endl;
+    }
         plik.close();
 
     int tab[] = { 97, 105, 115, 255, 111 },k;
@@ -309,4 +309,4 @@ TKolejkaPriorytetowaOsob kolejkaPriorytetowa;
     } while (!cin);
 
     cout << "Liczba = " << x << endl;
-*/}
+}

@@ -1,12 +1,12 @@
 #ifndef POZYCJA_H
 #define POZYCJA_H
-
+#include <string>
 
 class Pozycja
 {
     public:
         Pozycja();
-        Pozycja(string Nazwa,int Id, float Cena, int Czas);
+        Pozycja(string ,int, float , int );
         virtual ~Pozycja();
        // strumien zapisz(strumien);
        // strumien wczytaj(strumien);

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1497894524 source:/media/andrzej/Dane/studia/sem4/ZMPO/ZMPO/zmpo5/zmpo/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+
+1497956406 source:x:\studia\sem4\zmpo\zmpo\zmpo5\zmpo\main.cpp
+	<iostream>
+	<cstdlib>
+	<string>
+	<fstream>
+	<stdio.h>
+	<conio.h>
+	<queue>
+
