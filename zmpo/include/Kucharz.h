@@ -1,15 +1,22 @@
 #ifndef KUCHARZ_H
 #define KUCHARZ_H
 
+#include "Pracownik.h"
+#include "Zadanie.h"
 
-class Kucharz
+#include <string>
+#include <iostream>
+using namespace std;
+
+class Kucharz:public Pracownik
 {
     public:
         Kucharz();
         virtual ~Kucharz();
-        strumien zapisz(strumien);
-        strumien wczytaj(strumien);
+        //strumien zapisz(strumien);
+        //strumien wczytaj(strumien);
         void edytuj();
+        virtual void wykonaj();
 
         void setId(int);
         void setImie(string);
@@ -28,6 +35,7 @@ class Kucharz
         string imie;
         string nazwisko;
         int zlecenie;
+        Zadanie zadanie;
 };
 
 #endif // KUCHARZ_H

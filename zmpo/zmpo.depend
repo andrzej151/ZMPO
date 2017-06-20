@@ -16,3 +16,44 @@
 1497277387 source:x:\studia\sem4\zmpo\zmpo\zmpo\src\lanczyk.cpp
 	"Lanczyk.h"
 
+1497991165 source:c:\users\marik\desktop\git\zmpo\zmpo\src\kelner.cpp
+	"Kelner.h"
+
+1497991088 c:\users\marik\desktop\git\zmpo\zmpo\include\kelner.h
+	"Pracownik.h"
+	"Zadanie.h"
+	<string>
+	<iostream>
+
+1497989223 c:\users\marik\desktop\git\zmpo\zmpo\include\pracownik.h
+
+1497988392 c:\users\marik\desktop\git\zmpo\zmpo\include\zadanie.h
+
+1497827026 source:c:\users\marik\desktop\git\zmpo\zmpo\src\kolejka.cpp
+	"kolejka.h"
+
+1497827026 c:\users\marik\desktop\git\zmpo\zmpo\include\kolejka.h
+	<iostream>
+	<cstdio>
+
+1497991316 source:c:\users\marik\desktop\git\zmpo\zmpo\src\kucharz.cpp
+	"Kucharz.h"
+
+1497991299 c:\users\marik\desktop\git\zmpo\zmpo\include\kucharz.h
+	"Pracownik.h"
+	"Zadanie.h"
+	<string>
+	<iostream>
+
+1497827026 source:c:\users\marik\desktop\git\zmpo\zmpo\src\lanczyk.cpp
+	"Lanczyk.h"
+
+1497827026 c:\users\marik\desktop\git\zmpo\zmpo\include\lanczyk.h
+
+1497991348 source:c:\users\marik\desktop\git\zmpo\zmpo\src\listazyczen.cpp
+	"ListaZyczen.h"
+
+1497991335 c:\users\marik\desktop\git\zmpo\zmpo\include\listazyczen.h
+	"Zadanie.h"
+	<string>
+

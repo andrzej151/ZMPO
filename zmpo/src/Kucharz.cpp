@@ -10,35 +10,35 @@ Kucharz::~Kucharz()
     //dtor
 }
 
-Kucharz::edytuj()
+void Kucharz::edytuj()
 {
     //TODO proponuje dodac switch/case pytajacy co zmienic i wywolywac funkcje zmiany; eq.
-    cin << id;
+    cin >> id;
     setId(id);
-    cin << imie;
+    cin >> imie;
     setImie(imie);
-    cin << nazwisko;
+    cin >> nazwisko;
     setNazwisko(nazwisko);
-    cin << zlecenie;
+    cin >> zlecenie;
     setZlecenie(zlecenie);
 }
 
-Kucharz::setId(int id)
+void Kucharz::setId(int id)
 {
     this -> id = id;
 }
 
-Kucharz::setImie(string imie)
+void Kucharz::setImie(string imie)
 {
     this -> imie = imie;
 }
 
-Kucharz::setNazwisko(string nazwisko)
+void Kucharz::setNazwisko(string nazwisko)
 {
     this -> nazwisko = nazwisko;
 }
 
-Kucharz::setZlecenie(int zlecenie)
+void Kucharz::setZlecenie(int zlecenie)
 {
     this -> zlecenie = zlecenie;
 }
@@ -48,12 +48,12 @@ Kucharz::getId()
     return id;
 }
 
-Kucharz::getImie()
+string Kucharz::getImie()
 {
     return imie;
 }
 
-Kucharz::getNazwisko()
+string Kucharz::getNazwisko()
 {
     return nazwisko;
 }
@@ -61,4 +61,11 @@ Kucharz::getNazwisko()
 Kucharz::getZlecenie()
 {
     return zlecenie;
+}
+
+void Kucharz::wykonaj()
+{
+    //zzadanie czy morzna wykonac
+    //jesli tak wykonaj
+    //else od³urz na odp linie pobiesz nastepne zadanie
 }

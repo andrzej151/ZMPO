@@ -9,6 +9,17 @@
 #include "Kelner.h"
 #include "Stolik.h"
 
+#include "Zadanie.h"
+#include "Zamowienie.h"
+#include "ListaZyczen.h"
+
+//moze nie beda przydatne;
+#include "Rozlicz.h"
+#include "Obsluga.h"
+#include "Pozycja.h"
+#include "Pracownik.h"
+#include "Rozlicz.h"
+
 class main
 {
     public:
@@ -18,6 +29,9 @@ class main
     protected:
 
     private:
+        //void WstawOsobe( TKolejkaPriorytetowaOsob &, const char *, const char *, int, const char * )
+        int TUI();
+
         vector<Kucharz> kucharze;
         void dodajKucharza(Kucharz);
         void pokazKucharza(int);

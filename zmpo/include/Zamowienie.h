@@ -1,6 +1,8 @@
 #ifndef ZAMOWIENIE_H
 #define ZAMOWIENIE_H
 
+#include "Pozycja.h"
+#include <vector>
 
 class Zamowienie
 {
@@ -12,7 +14,8 @@ class Zamowienie
 
     private:
 
-        Potrawa [] lista; // zmienic na araylist lub dynamiczne
+        vector<Pozycja> lista; // Tu za arrayList robi Vector
+        //Pozycja [] lista; // zmienic na araylist lub dynamiczne
 
 
 };

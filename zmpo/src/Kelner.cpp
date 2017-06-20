@@ -10,28 +10,28 @@ Kelner::~Kelner()
     //dtor
 }
 
-Kelner::edytuj()
+void Kelner::edytuj()
 {
     //TODO proponuje dodac switch/case pytajacy co zmienic i wywolywac funkcje zmiany; eq.
-    cin << id;
+    cin >> id;
     setId(id);
-    cin << imie;
+    cin >> imie;
     setImie(imie);
-    cin << nazwisko;
+    cin >> nazwisko;
     setNazwisko(nazwisko);
 }
 
-Kelner::setId(int id)
+void Kelner::setId(int id)
 {
     this -> id = id;
 }
 
-Kelner::setImie(string imie)
+void Kelner::setImie(string imie)
 {
     this -> imie = imie;
 }
 
-Kelner::setNazwisko(string nazwisko)
+void Kelner::setNazwisko(string nazwisko)
 {
     this -> nazwisko = nazwisko;
 }
@@ -41,12 +41,19 @@ Kelner::getId()
     return id;
 }
 
-Kelner::getImie()
+string Kelner::getImie()
 {
     return imie;
 }
 
-Kelner::getNazwisko()
+string Kelner::getNazwisko()
 {
     return nazwisko;
+}
+
+void Kelner::wykonaj()
+{
+    //zzadanie czy morzna wykonac
+    //jesli tak wykonaj
+    //else od³urz na odp linie pobiesz nastepne zadanie
 }
