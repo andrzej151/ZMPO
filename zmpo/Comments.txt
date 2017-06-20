@@ -42,3 +42,5 @@ while (hit != 13 || decision != 0){
 Stolik : Zapisujemy tylko ilosc stolików do pliku.
 
 Nie zapominaj zapisywac calego projektu, bo jak otworzylem, to w "src" i "include" byly tylko po 2 pliki
+
+
