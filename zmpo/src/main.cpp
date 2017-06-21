@@ -475,7 +475,7 @@ void Main::dodajStolik()
 
 void Main::pokazStolik(int id)
 {
-    cout << stoliki.at(id).toString();
+     stoliki.at(id).wyswietl() ;
 }
 
 void Main::edytujStolik(int id)

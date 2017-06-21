@@ -21,10 +21,28 @@ void Stolik::edytuj()
     czyWolny = (x == "nie");
 }
 
+void Stolik::setListeZyczen(ListaZyczen Lista)
+    {
+        lista = Lista;
+        czyWolny = false;
+    }
+ void Stolik::wyswietl()
+    {
+        cout<<"Stolik "<<id<<endl;
+        if(czyWolny)
+        {
+            lista.wyswietl();
+        }
+        else
+        {
+            cout<<"wolny"<<endl;
+        }
+    }
 string Stolik::toString()
 {
     return czyWolny?"wolny":"zajety";
 }
+
 
 void Stolik::setStan(bool czyWolny)
 {
