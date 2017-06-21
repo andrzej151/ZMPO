@@ -19,11 +19,6 @@ Kucharz::~Kucharz()
     //dtor
 }
 
-string Kucharz::toString()
-{
-    return id + " " + imie + " " + nazwisko;
-}
-
 void Kucharz::edytuj()
 {
     //TODO proponuje dodac switch/case pytajacy co zmienic i wywolywac funkcje zmiany; eq.

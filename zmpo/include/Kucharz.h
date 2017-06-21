@@ -6,6 +6,7 @@
 #include <string>
 #include <iostream>
 #include <queue>
+#include <sstream>
 
 using namespace std;
 
@@ -15,7 +16,6 @@ class Kucharz:public Pracownik
         Kucharz();
         Kucharz(int, string, string);
         virtual ~Kucharz();
-        string toString();
 
         void edytuj();
         virtual void wykonaj();

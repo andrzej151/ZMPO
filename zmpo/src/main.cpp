@@ -175,6 +175,7 @@ void Main::WstawOsobe( TKolejkaPriorytetowaOsob & kp, const char * imie, const c
 
 void Main::TUI() //Text User Interface
 {
+    string a;
     unsigned int x;
     string y;
     string z;
@@ -182,23 +183,29 @@ void Main::TUI() //Text User Interface
     do {
         clear_screen();
 
-        printf("\n\n * KUCHARZE\n");
+        printf("\n * KUCHARZE\n");
         printf("%3d - %-20s\n",1,"dodaj");
         printf("%3d - %-20s\n",2,"pokaz");
         printf("%3d - %-20s\n",3,"edytuj");
         printf("%3d - %-20s\n",4,"usun");
 
-        printf("\n\n * KELNERZY\n");
+        printf("\n * KELNERZY\n");
         printf("%3d - %-20s\n",5,"dodaj");
         printf("%3d - %-20s\n",6,"pokaz");
         printf("%3d - %-20s\n",7,"edytuj");
         printf("%3d - %-20s\n",8,"usun");
 
-        printf("\n\n * STOLIKI\n");
+        printf("\n * STOLIKI\n");
         printf("%3d - %-20s\n",9,"dodaj");
         printf("%3d - %-20s\n",10,"pokaz");
         printf("%3d - %-20s\n",11,"edytuj");
         printf("%3d - %-20s\n",12,"usun");
+
+        printf("\n * LISTY\n");
+        printf("%3d - %-20s\n",13,"Kucharze");
+        printf("%3d - %-20s\n",14,"Kelnerzy");
+        printf("%3d - %-20s\n",15,"Stoliki");
+        cout << endl;
 
         cin >> x;
 
@@ -206,27 +213,25 @@ void Main::TUI() //Text User Interface
         {
             /** Kucharze **/
             case  1 : /** dodaj **/
-                clear_screen();
                 do
                 {
                     printf("\n * * Podaj imie :\n");
                     cin >> y;
-                } while (y != "");
+                } while (y == "");
 
                 do
                 {
                     printf("\n * * Podaj nazwisko :\n");
                     cin >> z;
-                } while (z != "");
+                } while (z == "");
 
                 dodajKucharza(Kucharz(kucharze.at(kucharze.size()-1).getId()+1,y,z));
                 x = -1; break;
 
             case  2 : /** pokaz **/
-                clear_screen();
                 do
                 {
-                    printf("\n * * Ktorego kucharza chcesz zobaczyc?\n");
+                    printf("\n * * Ktorego kucharza chcesz zobaczyc? 1 - %3d\n",kucharze.size());
                     cin >> x;
                     if (x > 0 && x <= kucharze.size())
                     {
@@ -239,10 +244,9 @@ void Main::TUI() //Text User Interface
                 x = -1; break;
 
             case  3 : /** edytuj **/
-                clear_screen();
                 do
                 {
-                    printf("\n * * Ktorego kucharza chcesz edytowac?\n");
+                    printf("\n * * Ktorego kucharza chcesz edytowac? 1 - %3d\n",kucharze.size());
                     cin >> x;
                     if (x > 0 && x <= kucharze.size())
                     {
@@ -255,10 +259,9 @@ void Main::TUI() //Text User Interface
                 x = -1; break;
 
             case  4 : /** usun **/
-                clear_screen();
                 do
                 {
-                    printf("\n * * Ktorego kucharza chcesz usunac?\n");
+                    printf("\n * * Ktorego kucharza chcesz usunac? 1 - %3d\n",kucharze.size());
                     cin >> x;
                     if (x > 0 && x <= kucharze.size())
                     {
@@ -272,27 +275,25 @@ void Main::TUI() //Text User Interface
 
             /** Kelnerzy **/
             case  5 : /** dodaj **/
-                clear_screen();
                 do
                 {
                     printf("\n * * Podaj imie :\n");
                     cin >> y;
-                } while (y != "");
+                } while (y == "");
 
                 do
                 {
                     printf("\n * * Podaj nazwisko :\n");
                     cin >> z;
-                } while (z != "");
+                } while (z == "");
 
                 dodajKelnera(Kelner(kelnerzy.at(kelnerzy.size()-1).getId()+1,y,z));
                 x = -1; break;
 
             case  6 : /** pokaz **/
-                clear_screen();
                 do
                 {
-                    printf("\n * * Ktorego kelnera chcesz zobaczyc?\n");
+                    printf("\n * * Ktorego kelnera chcesz zobaczyc? 1 - %3d\n",kelnerzy.size());
                     cin >> x;
                     if (x > 0 && x <= kelnerzy.size())
                     {
@@ -305,10 +306,9 @@ void Main::TUI() //Text User Interface
                 x = -1; break;
 
             case  7 : /** edytuj **/
-                clear_screen();
                 do
                 {
-                    printf("\n * * Ktorego kelnera chcesz edytowac?\n");
+                    printf("\n * * Ktorego kelnera chcesz edytowac? 1 - %3d\n",kelnerzy.size());
                     cin >> x;
                     if (x > 0 && x <= kelnerzy.size())
                     {
@@ -321,10 +321,9 @@ void Main::TUI() //Text User Interface
                 x = -1; break;
 
             case  8 : /** usun **/
-                clear_screen();
                 do
                 {
-                    printf("\n * * Ktorego kelnera chcesz usunac?\n");
+                    printf("\n * * Ktorego kelnera chcesz usunac? 1 - %3d\n",kelnerzy.size());
                     cin >> x;
                     if (x > 0 && x <= kelnerzy.size())
                     {
@@ -338,20 +337,18 @@ void Main::TUI() //Text User Interface
 
             /** Stoliki **/
             case  9 : /** dodaj **/
-                clear_screen();
                 dodajStolik();
                 x = -1; break;
 
             case 10 : /** pokaz **/
-                clear_screen();
                 do
                 {
-                    printf("\n * * Ktory stolik chcesz zobaczyc?\n");
+                    printf("\n * * Ktory stolik chcesz zobaczyc? 1 - %3d\n",stoliki.size());
                     cin >> x;
                     if (x > 0 && x <= stoliki.size())
                     {
                         pokazStolik(x - 1);
-                        printf("\n Stolik pokazany pomyslnie.\n");
+                        cout << endl;
                     }
                     else
                         printf("\n Blad podczas pokazywania.\n");
@@ -359,10 +356,9 @@ void Main::TUI() //Text User Interface
                 x = -1; break;
 
             case 11 : /** edytuj **/
-                clear_screen();
                 do
                 {
-                    printf("\n * * Ktory stolik chcesz edytowac?\n");
+                    printf("\n * * Ktory stolik chcesz edytowac? 1 - %3d\n",stoliki.size());
                     cin >> x;
                     if (x > 0 && x <= stoliki.size())
                     {
@@ -375,10 +371,9 @@ void Main::TUI() //Text User Interface
                 x = -1; break;
 
             case 12 : /** usun **/
-                clear_screen();
                 do
                 {
-                    printf("\n * * Ktory stolik chcesz usunac?\n");
+                    printf("\n * * Ktory stolik chcesz usunac? 1 - %3d\n",stoliki.size());
                     cin >> x;
                     if (x > 0 && x <= stoliki.size())
                     {
@@ -389,6 +384,27 @@ void Main::TUI() //Text User Interface
                         printf("\n Blad podczas usuwania.\n");
                 } while (x != 0);
                 x = -1; break;
+
+            case 13 : /** Kucharze **/
+                wyswietlListekucharzow();
+                cin >> a;
+                break;
+
+            case 14 : /** Kelnerzy **/
+                wyswietlListeKelnerow();
+                cin >> a;
+                break;
+
+            case 15 : /** Stoliki **/
+                for (unsigned int i = 0;i<stoliki.size();i++)
+                {
+                    cout << i+1 << " : ";
+                    pokazStolik(i);
+                    cout << endl;
+                }
+                cin >> a;
+                break;
+
         }
     } while (x != 0);
 }
@@ -406,7 +422,7 @@ void Main::dodajKucharza(Kucharz kucharz)
 
 void Main::pokazKucharza(int id)
 {
-    cout << kucharze.at(id).toString();
+    cout << kucharze[id];
 }
 
 void Main::edytujKucharza(int id)
@@ -426,7 +442,7 @@ void Main::dodajKelnera(Kelner kelner)
 
 void Main::pokazKelnera(int id)
 {
-    cout << kelnerzy.at(id).toString();
+    cout << kelnerzy[id];
 }
 
 void Main::edytujKelnera(int id)
@@ -522,7 +538,7 @@ void Main::wpiszKelnerow()
 void Main::wyswietlListeKelnerow()
 {
     cout<<"lista Kelnerow"<<endl;
-    for( int i = 0; i < kelnerzy.size(); i++ )
+    for( unsigned int i = 0; i < kelnerzy.size(); i++ )
     {
         cout << kelnerzy[ i ] ;
     }
@@ -533,7 +549,7 @@ bool Main::zapiszKucharzy()
     ofstream plik("kucharze.txt");
     plik<<kucharze.size()<<endl;
 
-    for( int i = 0; i < kucharze.size(); i++ )
+    for( unsigned int i = 0; i < kucharze.size(); i++ )
     {
         plik << kucharze[ i ] ;
     }
@@ -592,6 +608,6 @@ void Main::wyswietlListekucharzow()
     cout << "lista Kucharzy"<<endl;
     for( int i = 0; i < kucharze.size(); i++ )
     {
-    cout << kucharze[ i ] ;
+        cout << kucharze[ i ] ;
     }
 }

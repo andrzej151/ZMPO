@@ -14,7 +14,6 @@ class Kelner:public Pracownik
         Kelner();
         Kelner(int, string, string);
         virtual ~Kelner();
-        string toString();
 
         void edytuj();
         virtual void wykonaj();

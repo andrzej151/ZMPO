@@ -12,14 +12,18 @@ Stolik::~Stolik()
 
 void Stolik::edytuj()
 {
-    //TODO tu cos prostego
-    //cin >> stan;
-    //setStan(stan);
+    string x=".";
+    do
+    {
+        cout << "\nStolik jest "+toString()+". Czy ma byc zajety?\n";
+        cin >> x;
+    } while (x != "tak" && x != "ok" && x != "nie");
+    czyWolny = (x == "nie");
 }
 
 string Stolik::toString()
 {
-    return czyWolny?"Wolny":"Zajety";
+    return czyWolny?"wolny":"zajety";
 }
 
 void Stolik::setStan(bool czyWolny)
