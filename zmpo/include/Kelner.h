@@ -14,8 +14,8 @@ class Kelner:public Pracownik
         Kelner();
         Kelner(int, string, string);
         virtual ~Kelner();
-        //strumien zapisz(strumien);
-        //strumien wczytaj(strumien);
+        string toString();
+
         void edytuj();
         virtual void wykonaj();
 

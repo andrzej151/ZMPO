@@ -1,12 +1,6 @@
 //TODO
 Dyskusje w tym pliku;
 
-03:08 16.06.2017 Mateusz
-Zauwazylem, ze kolejka jest dziwnie zaimplementowana, w .h jest wszystko
-Znajdz ten sposob na zapisywanie do pliku i dodaj go lub chociaz tutaj wpisz
-Zostawiam tutaj gotoxy, moze w mainie uzyjemy;
-
-
 #include <iostream>
 #include <windows.h>
 using namespace std;

@@ -17,6 +17,11 @@ void Stolik::edytuj()
     //setStan(stan);
 }
 
+string Stolik::toString()
+{
+    return czyWolny?"Wolny":"Zajety";
+}
+
 void Stolik::setStan(bool czyWolny)
 {
     this -> czyWolny = czyWolny;

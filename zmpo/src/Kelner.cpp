@@ -17,6 +17,11 @@ Kelner::~Kelner()
     //dtor
 }
 
+string Kelner::toString()
+{
+    return id + " " + imie + " " + nazwisko;
+}
+
 void Kelner::edytuj()
 {
     //TODO proponuje dodac switch/case pytajacy co zmienic i wywolywac funkcje zmiany; eq.
