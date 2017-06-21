@@ -10,6 +10,8 @@ class Stolik
     public:
         Stolik();
         virtual ~Stolik();
+        string toString();
+
         void edytuj();
 
         void setStan(bool);

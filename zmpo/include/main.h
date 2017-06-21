@@ -66,8 +66,8 @@ class Main
         bool wczytajKelnerow();
         void wpiszKelnerow();
         void wyswietlListeKelnerow();
-        bool zapiszKucharzow();
-        bool wczytajKucharzow();
+        bool zapiszKucharzy();
+        bool wczytajKucharzy();
         void wpiszkucharzow();
         void wyswietlListekucharzow();
 };

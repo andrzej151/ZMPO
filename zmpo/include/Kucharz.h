@@ -15,8 +15,8 @@ class Kucharz:public Pracownik
         Kucharz();
         Kucharz(int, string, string);
         virtual ~Kucharz();
-        //strumien zapisz(strumien);
-        //strumien wczytaj(strumien);
+        string toString();
+
         void edytuj();
         virtual void wykonaj();
 
