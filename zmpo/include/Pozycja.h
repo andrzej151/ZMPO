@@ -2,6 +2,8 @@
 #define POZYCJA_H
 
 #include "Zadanie.h"
+#include <string>
+using namespace std;
 
 class Pozycja:public Zadanie
 {
@@ -13,14 +15,14 @@ class Pozycja:public Zadanie
         virtual ~Pozycja();
         //strumien zapisz(strumien);
         //strumien wczytaj(strumien);
-
-    protected:
-
-    private:
         string nazwa;
         int id;
         float cena;
         int czas;
+
+    protected:
+
+    private:
 };
 
 #endif // POZYCJA_H

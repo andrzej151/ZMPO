@@ -10,13 +10,13 @@ Rozlicz::~Rozlicz()
     //dtor
 }
 
-Rozlicz::wykonaj()
+void Rozlicz::wykonaj()
 {
     if(czyMoznaWykonac())
     czas--;
 }
 
-Rozlicz::czyMoznaWykonac()
+bool Rozlicz::czyMoznaWykonac()
 {
     return czas>0;
 }

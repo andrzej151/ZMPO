@@ -2,6 +2,8 @@
 #define ROZLICZ_H
 
 #include "Zadanie.h"
+#include <string>
+using namespace std;
 
 class Rozlicz:public Zadanie
 {

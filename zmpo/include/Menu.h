@@ -13,7 +13,7 @@ class Menu
     protected:
 
     private:
-        Potrawa[];
+        //Potrawa[];
 };
 
 #endif // MENU_H

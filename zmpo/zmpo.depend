@@ -16,18 +16,18 @@
 1497277387 source:x:\studia\sem4\zmpo\zmpo\zmpo\src\lanczyk.cpp
 	"Lanczyk.h"
 
-1497991165 source:c:\users\marik\desktop\git\zmpo\zmpo\src\kelner.cpp
+1498005955 source:c:\users\marik\desktop\git\zmpo\zmpo\src\kelner.cpp
 	"Kelner.h"
 
-1497991088 c:\users\marik\desktop\git\zmpo\zmpo\include\kelner.h
+1498008956 c:\users\marik\desktop\git\zmpo\zmpo\include\kelner.h
 	"Pracownik.h"
 	"Zadanie.h"
 	<string>
 	<iostream>
 
-1497989223 c:\users\marik\desktop\git\zmpo\zmpo\include\pracownik.h
+1498008724 c:\users\marik\desktop\git\zmpo\zmpo\include\pracownik.h
 
-1497988392 c:\users\marik\desktop\git\zmpo\zmpo\include\zadanie.h
+1498008920 c:\users\marik\desktop\git\zmpo\zmpo\include\zadanie.h
 
 1497827026 source:c:\users\marik\desktop\git\zmpo\zmpo\src\kolejka.cpp
 	"kolejka.h"
@@ -36,14 +36,15 @@
 	<iostream>
 	<cstdio>
 
-1497991316 source:c:\users\marik\desktop\git\zmpo\zmpo\src\kucharz.cpp
+1498008217 source:c:\users\marik\desktop\git\zmpo\zmpo\src\kucharz.cpp
 	"Kucharz.h"
 
-1497991299 c:\users\marik\desktop\git\zmpo\zmpo\include\kucharz.h
+1498008217 c:\users\marik\desktop\git\zmpo\zmpo\include\kucharz.h
 	"Pracownik.h"
 	"Zadanie.h"
 	<string>
 	<iostream>
+	<queue>
 
 1497827026 source:c:\users\marik\desktop\git\zmpo\zmpo\src\lanczyk.cpp
 	"Lanczyk.h"
@@ -56,4 +57,79 @@
 1497991335 c:\users\marik\desktop\git\zmpo\zmpo\include\listazyczen.h
 	"Zadanie.h"
 	<string>
+
+1498009387 c:\users\marik\desktop\git\zmpo\zmpo\include\main.h
+	<iostream>
+	<string>
+	<fstream>
+	<queue>
+	<stdio.h>
+	<conio.h>
+	<vector>
+	<cstdlib>
+	"Kelner.h"
+	"Kucharz.h"
+	"Stolik.h"
+	"Zadanie.h"
+	"Zamowienie.h"
+	"ListaZyczen.h"
+	"Rozlicz.h"
+	"Pozycja.h"
+	"Pracownik.h"
+	"Rozlicz.h"
+
+1498008831 c:\users\marik\desktop\git\zmpo\zmpo\include\stolik.h
+	<iostream>
+
+1497991506 c:\users\marik\desktop\git\zmpo\zmpo\include\zamowienie.h
+	"Pozycja.h"
+	<vector>
+
+1498008547 c:\users\marik\desktop\git\zmpo\zmpo\include\pozycja.h
+	"Zadanie.h"
+	<string>
+
+1498008744 c:\users\marik\desktop\git\zmpo\zmpo\include\rozlicz.h
+	"Zadanie.h"
+	<string>
+
+1498004189 c:\users\marik\desktop\git\zmpo\zmpo\include\obsluga.h
+	"Kucharz.h"
+	"Kelner.h"
+	"main.h"
+
+1498009387 source:c:\users\marik\desktop\git\zmpo\zmpo\src\main.cpp
+	"Main.h"
+
+1497827026 source:c:\users\marik\desktop\git\zmpo\zmpo\src\menu.cpp
+	"Menu.h"
+
+1498008378 c:\users\marik\desktop\git\zmpo\zmpo\include\menu.h
+
+1498004189 source:c:\users\marik\desktop\git\zmpo\zmpo\src\obsluga.cpp
+	"Obsluga.h"
+
+1498008577 source:c:\users\marik\desktop\git\zmpo\zmpo\src\pozycja.cpp
+	"Pozycja.h"
+
+1498008724 source:c:\users\marik\desktop\git\zmpo\zmpo\src\pracownik.cpp
+	"Pracownik.h"
+
+1498002491 source:c:\users\marik\desktop\git\zmpo\zmpo\src\rozlicz.cpp
+	"Rozlicz.h"
+
+1498008906 source:c:\users\marik\desktop\git\zmpo\zmpo\src\stolik.cpp
+	"Stolik.h"
+
+1498008920 source:c:\users\marik\desktop\git\zmpo\zmpo\src\zadanie.cpp
+	"Zadanie.h"
+
+1497827026 source:c:\users\marik\desktop\git\zmpo\zmpo\src\zamowienie.cpp
+	"Zamowienie.h"
+
+1498009427 source:c:\users\marik\desktop\git\zmpo\zmpo\src\in.cpp
+	"in.h"
+
+1498009440 c:\users\marik\desktop\git\zmpo\zmpo\include\in.h
+	"Main.h"
 

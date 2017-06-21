@@ -5,9 +5,9 @@
 class Pracownik
 {
     public:
-        virtual void wykonaj();
         Pracownik();
         virtual ~Pracownik();
+        virtual void wykonaj() = 0;
 
     protected:
 

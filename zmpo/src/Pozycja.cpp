@@ -10,13 +10,13 @@ Pozycja::~Pozycja()
     //dtor
 }
 
-Pozycja::wykonaj()
+void Pozycja::wykonaj()
 {
     if(czyMoznaWykonac())
     czas--;
 }
 
-Pozycja::czyMoznaWykonac()
+bool Pozycja::czyMoznaWykonac()
 {
     return czas > 0;
 }

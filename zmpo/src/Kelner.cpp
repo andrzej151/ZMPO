@@ -5,6 +5,13 @@ Kelner::Kelner()
     //ctor
 }
 
+Kelner::Kelner(int Id, string Imie, string Nazwisko)
+{
+    imie = Imie;
+    nazwisko = Nazwisko;
+    id = Id;
+}
+
 Kelner::~Kelner()
 {
     //dtor

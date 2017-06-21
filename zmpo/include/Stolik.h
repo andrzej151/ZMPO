@@ -1,6 +1,9 @@
 #ifndef STOLIK_H
 #define STOLIK_H
 
+#include <iostream>
+using namespace std;
+
 
 class Stolik
 {

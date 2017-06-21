@@ -1,4 +1,4 @@
-#include "main.h"
+#include "Main.h"
 
 struct SOsoba
 {
@@ -31,130 +31,137 @@ struct PorownajOsoby
     }
 };
 
-//typedef priority_queue < SOsoba, vector < SOsoba >, PorownajOsoby > TKolejkaPriorytetowaOsob;
-
-main::main() {
-
-    TKolejkaPriorytetowaOsob kolejkaPriorytetowa;
-    WstawOsobe( kolejkaPriorytetowa, "Imie", "Nazwisko", 1, "Pierwszy" );
-    WstawOsobe( kolejkaPriorytetowa, "Imie", "Nazwisko", 3, "Drugi" );
-    WstawOsobe( kolejkaPriorytetowa, "Imie", "Nazwisko", 2, "Trzeci" );
-    WstawOsobe( kolejkaPriorytetowa, "Imie", "Ziomek", 4, "Czwarty" );
-
-    while( kolejkaPriorytetowa.size() > 0 )
-    {
-        SOsoba odczytana = kolejkaPriorytetowa.top();
-        kolejkaPriorytetowa.pop();
-        cout << odczytana.imie << "; " << odczytana.nazwisko << "; " << odczytana.kolejnosc << "; " << odczytana.inneDane << "; " << endl;
-    }
-
-    getch();
-
-
-    int decyzja = 0;
-    do{
-        decyzja = TUI();
-    }while(decyzja!=0);
-    wczytaj();
-
-    int b=0;
-    Pozycja t[] = {  Pozycja("Pizza",1,100,19.33), Pozycja("Pizza",1,100,19.33),
-    Pozycja("Pizza",1,100,19.33), Pozycja("Pizza",1,100,19.33),  };
-        //cin>>t[1];
-        ofstream plik("plik.txt");
-      //  cin>>b;
-
-
-    for (int i = 0; i < 4; i++)
-    {
-
-        cout << t[i] << endl;
-        plik << t[i] << endl;
-    }
-        plik.close();
-
-    int tab[] = { 97, 105, 115, 255, 111 },k;
-
-    int size = sizeof(tab)/sizeof(tab[0]);
-
-    cout << "Tablica o  wymiarze: " << size << endl;
-    for (int i = 0; i < size; ++i)
-        cout << tab[i] << " ";
-    cout << endl;
-
-    ofstream file_out("file.dat",ios::out|ios::binary);
-    if (! file_out ) {
-        cout << "Nie mozna otworzyc file_out" << endl;
-        return -1;
-    }
-
-    file_out.write((char*)tab, sizeof(tab));
-    file_out.close();
-
-    fstream file("file.dat",ios::in|ios::out|ios::binary);
-    if (! file ) {
-        cout << "Nie mozna otworzyc file" << endl;
-        return -1;
-    }
-
-    file.seekg(0,ios::end);
-    streamsize len = file.tellg();
-    cout << "Plik ma dlugosc " << len << " bajtow\n";
-    file.seekg(0);
-
-    cout << "Kolejne bajty zawieraja:" << endl;
-    while ( (k = file.get()) != EOF )
-        cout << k << " ";
-    cout << endl;
-
-    file.clear(); // <-- KONIECZNE !!!
-
-    file.seekg(4);
-    file.read((char*)&k,4);
-    cout << "Integer od pozycji 4: " << k << endl;
-
-    file.seekp(12);
-    file.write((char*)&k,4);
-
-    file.seekg(0);
-    cout << "Kolejne bajty pliku teraz zawieraja:" << endl;
-    while ( (k = file.get()) != EOF )
-        cout << k << " ";
-    cout << endl;
-
-    file.close();
-
-    const int DIM = 80;
-    char      name[DIM];
-    ifstream  inplik;
-    double    x;
-
-    do {
-        cout << "Plik wejsciowy: ";
-        cin.getline(name, DIM);
-
-        inplik.clear();
-        inplik.open(name);
-    } while (!inplik);
-
-    cout << "Plik = " << name << endl;
-    inplik.close();
-
-
-    do {
-        if (!cin) {
-            // wazna kolejnosc!
-            cin.clear();
-            cin.ignore(1024,'\n');
-        };
-        cout << "Podaj liczbe: ";
-        cin >> x;
-    } while (!cin);
-
-    cout << "Liczba = " << x << endl;
+ostream& operator<<(ostream& str, const Kucharz& k) {
+    return str << k.id<<" "<<k.imie<< " " << k.nazwisko <<endl;
 }
 
-main::WstawOsobe(TKolejkaPriorytetowaOsob & kp, const char * imie, const char * nazwisko, int kolejnosc, const char * inneDane)
+ostream& operator<<(ostream& str, const Kelner& k) {
+    return str << k.id<<" "<<k.imie<< " " << k.nazwisko <<endl;
+}
+
+istream& operator>>(istream& str,  Kucharz& k) {
+int x=0;
+string s="";
+
+do{
+        system( "cls" );
+        cout<<"podaj id"<<endl;
+     if (!str) {
+            // wazna kolejnosc!
+            str.clear();
+            str.ignore(1024,'\n');
+        };
+        str >> x;
+    } while (!str);
+    k.setId(x);
+
+do{
+    system( "cls" );
+        cout<<"podaj imie"<<endl;
+     if (!str) {
+            // wazna kolejnosc!
+            str.clear();
+            str.ignore(1024,'\n');
+        };
+        str >> s;
+    } while (!str);
+    k.setImie(s);
+
+    do{
+        system( "cls" );
+        cout<<"podaj nazwisko"<<endl;
+     if (!str) {
+            // wazna kolejnosc!
+            str.clear();
+            str.ignore(1024,'\n');
+        };
+        str >> s;
+    } while (!str);
+    k.setNazwisko(s);
+    system( "cls" );
+    return str;
+}
+
+istream& operator>>(istream& str,  Kelner& k) {
+int x=0;
+string s="";
+
+do{
+        system( "cls" );
+        cout<<"podaj id"<<endl;
+     if (!str) {
+            // wazna kolejnosc!
+            str.clear();
+            str.ignore(1024,'\n');
+        };
+        str >> x;
+    } while (!str);
+    k.setId(x);
+
+do{
+    system( "cls" );
+        cout<<"podaj imie"<<endl;
+     if (!str) {
+            // wazna kolejnosc!
+            str.clear();
+            str.ignore(1024,'\n');
+        };
+        str >> s;
+    } while (!str);
+    k.setImie(s);
+
+    do{
+        system( "cls" );
+        cout<<"podaj nazwisko"<<endl;
+     if (!str) {
+            // wazna kolejnosc!
+            str.clear();
+            str.ignore(1024,'\n');
+        };
+        str >> s;
+    } while (!str);
+    k.setNazwisko(s);
+    system( "cls" );
+    return str;
+}
+
+
+Main::Main() {
+    int x;
+    wczytajKelnerow();
+    wyswietlListeKelnerow();
+    cin>>x;
+
+    wczytajKucharzow();
+    wyswietlListekucharzow();
+    cin>>x;
+
+    //kelnerzy
+    wpiszKelnerow();
+    wyswietlListeKelnerow();
+    zapiszKelnerow();
+    wczytajKelnerow();
+    wyswietlListeKelnerow();
+    //kucharze
+
+    wpiszkucharzow();
+    wyswietlListekucharzow();
+    zapiszKucharzow();
+    wczytajKucharzow();
+    wyswietlListekucharzow();
+}
+
+void Main::clear_screen()
+{
+#ifdef WINDOWS
+    std::system("cls");
+#else
+    // Assume POSIX
+    std::system ("clear");
+#endif
+}
+
+void Main::WstawOsobe( TKolejkaPriorytetowaOsob & kp, const char * imie, const char * nazwisko, int kolejnosc, const char * inneDane )
 {
     SOsoba nowaOsoba;
     nowaOsoba.imie = imie;
@@ -164,96 +171,413 @@ main::WstawOsobe(TKolejkaPriorytetowaOsob & kp, const char * imie, const char * 
     kp.push( nowaOsoba );
 }
 
-main::TUI() //Text User Interface
+void Main::TUI() //Text User Interface
 {
-    int x;
+    unsigned int x;
+    string y;
+    string z;
 
     do {
-    system( "cls" );
-    cout<< ("_____________MENU_______________")<<endl;
-    cout<< ("1 - wczytaj dane dnia")<<endl;
-    cout<< ("2 - zapisz dane dnia")<<endl;
-    cout<< ("3 - edytuj dane dnia")<<endl;
-    cout<< ("4 - przesun czas o 1")<<endl;
-    cout<< ("5 - przesun czas o -1")<<endl;
-    cout<< ("6 - przesun czas o ")<<endl;
-    cout<< ("0 - koniec")<<endl;
+        clear_screen();
 
+        printf("\n\n * KUCHARZE\n");
+        printf("%3d - %50s",1,"dodaj");
+        printf("%3d - %50s",2,"pokaż");
+        printf("%3d - %50s",3,"edytuj");
+        printf("%3d - %50s",4,"usuń");
 
+        printf("\n\n * KELNERZY\n");
+        printf("%3d - %50s",5,"dodaj");
+        printf("%3d - %50s",6,"pokaż");
+        printf("%3d - %50s",7,"edytuj");
+        printf("%3d - %50s",8,"usuń");
+
+        printf("\n\n * STOLIKI\n");
+        printf("%3d - %50s",9,"dodaj");
+        printf("%3d - %50s",10,"pokaż");
+        printf("%3d - %50s",11,"edytuj");
+        printf("%3d - %50s",12,"usuń");
+
+        cin >> x;
+
+        switch(x)
+        {
+            /** Kucharze **/
+            case  1 :
+                do
+                {
+                    printf("\n * * Podaj imię n");
+                    cin >> y;
+                } while (y != "");
+
+                do
+                {
+                    printf("\n * * Podaj nazwisko n");
+                    cin >> z;
+                } while (z != "");
+
+                dodajKucharza(Kucharz(kucharze.at(kucharze.size()-1).getId()+1,y,z));
+                break;
+
+            case  2 :
+                do
+                {
+                    printf("\n * * Którego kucharza chcesz zobaczyć?");
+                    cin >> x;
+                    if (x > 0 && x <= kucharze.size())
+                    {
+                        pokazKucharza(x - 1);
+                        printf("\n Kucharz pokazany pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas pokazywania");
+                } while (x != 0);
+                break;
+
+            case  3 :
+                do
+                {
+                    printf("\n * * Którego kucharza chcesz edytować?");
+                    cin >> x;
+                    if (x > 0 && x <= kucharze.size())
+                    {
+                        edytujKucharza(x - 1);
+                        printf("\n Kucharz edytowany pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas edytowania");
+                } while (x != 0);
+                break;
+
+            case  4 :
+                do
+                {
+                    printf("\n * * Którego kucharza chcesz usunąć?");
+                    cin >> x;
+                    if (x > 0 && x <= kucharze.size())
+                    {
+                        usunKucharza(x - 1);
+                        printf("\n Kucharz usunięty pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas usuwania");
+                } while (x != 0);
+                break;
+
+            /** Kelnerzy **/
+            case  5 :
+                do
+                {
+                    printf("\n * * Podaj imię n");
+                    cin >> y;
+                } while (y != "");
+
+                do
+                {
+                    printf("\n * * Podaj nazwisko n");
+                    cin >> z;
+                } while (z != "");
+
+                dodajKelnera(Kelner(kelnerzy.at(kelnerzy.size()-1).getId()+1,y,z));
+                break;
+
+            case  6 :
+                do
+                {
+                    printf("\n * * Którego kelnera chcesz zobaczyć?");
+                    cin >> x;
+                    if (x > 0 && x <= kelnerzy.size())
+                    {
+                        pokazKelnera(x - 1);
+                        printf("\n Kelner pokazany pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas pokazywania");
+                } while (x != 0);
+                break;
+
+            case  7 :
+                do
+                {
+                    printf("\n * * Którego kelnera chcesz edytować?");
+                    cin >> x;
+                    if (x > 0 && x <= kelnerzy.size())
+                    {
+                        edytujKelnera(x - 1);
+                        printf("\n Kelner edytowany pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas edytowania");
+                } while (x != 0);
+                break;
+
+            case  8 :
+                do
+                {
+                    printf("\n * * Którego kelnera chcesz usunąć?");
+                    cin >> x;
+                    if (x > 0 && x <= kelnerzy.size())
+                    {
+                        usunKelnera(x - 1);
+                        printf("\n Kelner usunięty pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas usuwania");
+                } while (x != 0);
+                break;
+
+            /** Stoliki **/
+            case  9 :
+                dodajStolik();
+                break;
+
+            case 10 :
+                do
+                {
+                    printf("\n * * Który stolik chcesz zobaczyć?");
+                    cin >> x;
+                    if (x > 0 && x <= stoliki.size())
+                    {
+                        pokazStolik(x - 1);
+                        printf("\n Stolik pokazany pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas pokazywania");
+                } while (x != 0);
+                break;
+
+            case 11 :
+                do
+                {
+                    printf("\n * * Który stolik chcesz edytować?");
+                    cin >> x;
+                    if (x > 0 && x <= stoliki.size())
+                    {
+                        edytujStolik(x - 1);
+                        printf("\n Stolik edytowany pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas edytowania");
+                } while (x != 0);
+                break;
+
+            case 12 :
+                do
+                {
+                    printf("\n * * Który stolik chcesz usunąć?");
+                    cin >> x;
+                    if (x > 0 && x <= stoliki.size())
+                    {
+                        usunStolik(x - 1);
+                        printf("\n Stolik usunięty pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas usuwania");
+                } while (x != 0);
+                break;
+        }
+    } while (x != 0);
+}
+
+/****************************************************/
+Main::~Main()
+{
+    //dtor
+}
+
+void Main::dodajKucharza(Kucharz kucharz)
+{
+    kucharze.push_back(kucharz);
+}
+
+void Main::pokazKucharza(int id)
+{
+    kucharze.at(id);
+}
+
+void Main::edytujKucharza(int id)
+{
+    kucharze.at(id).edytuj();
+}
+
+void Main::usunKucharza(int id)
+{
+    kucharze.erase(kucharze.begin()+id);
+}
+
+void Main::dodajKelnera(Kelner kelner)
+{
+    kelnerzy.push_back(kelner);
+}
+
+void Main::pokazKelnera(int id)
+{
+    kelnerzy.at(id);
+}
+
+void Main::edytujKelnera(int id)
+{
+    kelnerzy.at(id).edytuj();
+}
+
+void Main::usunKelnera(int id)
+{
+    kelnerzy.erase(kelnerzy.begin()+id);
+}
+
+void Main::dodajStolik()
+{
+    stoliki.push_back(Stolik());
+}
+
+void Main::pokazStolik(int id)
+{
+    stoliki.at(id);
+}
+
+void Main::edytujStolik(int id)
+{
+    stoliki.at(id).edytuj();
+}
+
+void Main::usunStolik(int id)
+{
+    stoliki.erase(stoliki.begin()+id);
+}
+
+/********************/
+
+bool Main::zapiszKelnerow()
+{
+    ofstream plik("kelnerzy.txt");
+    plik<<kelnerzy.size()<<endl;
+
+    for( unsigned int i = 0; i < kelnerzy.size(); i++ )
+    {
+        plik << kelnerzy[ i ] ;
+    }
+    plik.close();
+}
+
+bool Main::wczytajKelnerow()
+{
+    ifstream plik("kelnerzy.txt");
+    int x=0;
+    do{
+        system( "cls" );
+         if (!plik) {
+            // wazna kolejnosc!
+            plik.clear();
+            plik.ignore(1024,'\n');
+        };
+        plik >> x;
+    } while (!plik||x<1);
+
+    for(int i=0;i<x;i++)
+    {
+        Kelner k;
+        plik>>k;
+        kelnerzy.push_back(k);
+    }
+    plik.close();
+}
+
+void Main::wpiszKelnerow()
+{
+    int x=0;
+
+    do{
+        system( "cls" );
+        cout<<"ilu kelnerow chcesz wpisac"<<endl;
         if (!cin) {
             // wazna kolejnosc!
             cin.clear();
             cin.ignore(1024,'\n');
         };
-        cout << "Podaj liczbe: ";
         cin >> x;
-    } while (!cin);
+    } while (!cin||x<1);
 
-    return x;
+    for(int i=0;i<x;i++)
+    {
+        Kelner k;
+        cin>>k;
+        kelnerzy.push_back(k);
+    }
 }
 
-/****************************************************/
-main::~main()
+void Main::wyswietlListeKelnerow()
 {
-    //dtor
+    cout<<"lista Kelnerow"<<endl;
+    for( int i = 0; i < kelnerzy.size(); i++ )
+    {
+        cout << kelnerzy[ i ] ;
+    }
 }
 
-main::dodajKucharza(Kucharz kucharz)
+bool Main::zapiszKucharzow()
 {
-    kucharze.push_back(kucharz);
+    ofstream plik("kucharze.txt");
+    plik<<kucharze.size()<<endl;
+
+    for( int i = 0; i < kucharze.size(); i++ )
+    {
+        plik << kucharze[ i ] ;
+    }
+    plik.close();
 }
 
-main::pokazKucharza(int id)
+bool Main::wczytajKucharzow()
 {
-    kucharze.at(id);
+    ifstream plik("kucharze.txt");
+    int x=0;
+    do{
+        system( "cls" );
+        if (!plik) {
+            // wazna kolejnosc!
+            plik.clear();
+            plik.ignore(1024,'\n');
+        };
+        plik >> x;
+    } while (!plik||x<1);
+
+    for(int i=0;i<x;i++)
+    {
+        Kucharz k;
+        plik>>k;
+        kucharze.push_back(k);
+    }
+    plik.close();
+
 }
 
-main::edytujKucharza(int id)
+void Main::wpiszkucharzow()
 {
-    kucharze.at(id).edytuj();
+    int x=0;
+
+    do{
+        system( "cls" );
+        cout<<"ilu Kucharzow chcesz wpisac"<<endl;
+        if (!cin) {
+            // wazna kolejnosc!
+            cin.clear();
+            cin.ignore(1024,'\n');
+        };
+        cin >> x;
+    } while (!cin||x<1);
+
+    for(int i=0;i<x;i++)
+    {
+        Kucharz k;
+        cin>>k;
+        kucharze.push_back(k);
+    }
 }
 
-main::usunKucharza(int id)
+void Main::wyswietlListekucharzow()
 {
-    kucharze.erase(id)
-}
-
-main::dodajKelnera(Kelner kelner)
-{
-    kelnerzy.push_back(kelner);
-}
-
-main::pokazKelnera(int id)
-{
-    kelnerzy.at(id);
-}
-
-main::edytujKelnera(int id)
-{
-    kelnerzy.at(id).edytuj();
-}
-
-main::usunKelnera(int id)
-{
-    kelnerzy.erase(id);
-}
-
-main::dodajStolik(Stolik stolik)
-{
-    stoliki.push_back(stolik);
-}
-
-main::pokazStolik(int id)
-{
-    stoliki.at(id);
-}
-
-main::edytujStolik(int id)
-{
-    stoliki.at(id).edytuj();
-}
-
-main::usunStolik(int id)
-{
-    stoliki.erase(id);
+    cout << "lista Kucharzow"<<endl;
+    for( int i = 0; i < kucharze.size(); i++ )
+    {
+    cout << kucharze[ i ] ;
+    }
 }

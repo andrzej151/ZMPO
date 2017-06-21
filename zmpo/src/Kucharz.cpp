@@ -2,7 +2,16 @@
 
 Kucharz::Kucharz()
 {
-    //ctor
+    imie = "";
+    nazwisko = "";
+    id = 0;
+}
+
+Kucharz::Kucharz(int Id, string Imie, string Nazwisko)
+{
+    imie = Imie;
+    nazwisko = Nazwisko;
+    id = Id;
 }
 
 Kucharz::~Kucharz()

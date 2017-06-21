@@ -1,6 +1,11 @@
 #ifndef OBSLUGA_H
 #define OBSLUGA_H
 
+#include "Kucharz.h"
+#include "Kelner.h"
+#include "main.h"
+
+using namespace std;
 
 class Obsluga
 {
@@ -11,9 +16,6 @@ class Obsluga
     protected:
 
     private:
-        Kelner * listaKelnerow;
-        Kucharz * listaKurzarzow;
-        Stolik * listaStolikow;
         //KolejkaPriorytetowaZamowien kolejkaZamowien;
         //KolejkaPriorytetowaPzycji kolejkaPozycjiDoWykonania;
         //KolejkaPriorytetowaPzycji kolejkaPozycjiDoZaniesienia;

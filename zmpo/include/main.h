@@ -1,12 +1,18 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <queue>
+
 #include <stdio.h>
 #include <conio.h>
 #include <vector>
+#include <cstdlib>
 
-#include "Kucharz.h"
 #include "Kelner.h"
+#include "Kucharz.h"
 #include "Stolik.h"
 
 #include "Zadanie.h"
@@ -15,22 +21,27 @@
 
 //moze nie beda przydatne;
 #include "Rozlicz.h"
-#include "Obsluga.h"
 #include "Pozycja.h"
 #include "Pracownik.h"
 #include "Rozlicz.h"
 
-class main
+struct SOsoba;
+struct PorownajOsoby;
+class Main
 {
     public:
-        main();
-        virtual ~main();
+        Main();
+        virtual ~Main();
+
+        typedef std::priority_queue < SOsoba, std::vector < SOsoba >, PorownajOsoby > TKolejkaPriorytetowaOsob;
 
     protected:
 
     private:
-        //void WstawOsobe( TKolejkaPriorytetowaOsob &, const char *, const char *, int, const char * )
-        int TUI();
+
+        void WstawOsobe( TKolejkaPriorytetowaOsob &, const char *, const char *, int, const char * );
+        void TUI();
+        void clear_screen();
 
         vector<Kucharz> kucharze;
         void dodajKucharza(Kucharz);
@@ -45,10 +56,20 @@ class main
         void usunKelnera(int);
 
         vector<Stolik> stoliki;
-        void dodajStolik(Stolik);
+        void dodajStolik();
         void pokazStolik(int);
         void edytujStolik(int);
         void usunStolik(int);
+
+
+        bool zapiszKelnerow();
+        bool wczytajKelnerow();
+        void wpiszKelnerow();
+        void wyswietlListeKelnerow();
+        bool zapiszKucharzow();
+        bool wczytajKucharzow();
+        void wpiszkucharzow();
+        void wyswietlListekucharzow();
 };
 
 #endif // MAIN_H

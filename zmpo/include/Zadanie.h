@@ -8,8 +8,8 @@ class Zadanie
         Zadanie();
         virtual ~Zadanie();
 
-        virtual void wykonaj();
-        virtual bool czyMoznaWykonac();
+        virtual void wykonaj()=0;
+        virtual bool czyMoznaWykonac()=0;
 
     protected:
 

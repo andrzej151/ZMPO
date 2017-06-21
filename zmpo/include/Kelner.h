@@ -12,6 +12,7 @@ class Kelner:public Pracownik
 {
     public:
         Kelner();
+        Kelner(int, string, string);
         virtual ~Kelner();
         //strumien zapisz(strumien);
         //strumien wczytaj(strumien);
@@ -26,13 +27,14 @@ class Kelner:public Pracownik
         string getImie();
         string getNazwisko();
 
-    protected:
-
-    private:
         int id;
         string imie;
         string nazwisko;
-        Zadanie zadanie;
+
+    protected:
+
+    private:
+        Zadanie *zadanie;
 };
 
 #endif // KELNER_H

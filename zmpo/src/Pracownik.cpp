@@ -9,5 +9,3 @@ Pracownik::~Pracownik()
 {
     //dtor
 }
-
-wykonaj()=0;

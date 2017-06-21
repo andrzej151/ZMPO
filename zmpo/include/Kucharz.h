@@ -3,15 +3,17 @@
 
 #include "Pracownik.h"
 #include "Zadanie.h"
-
 #include <string>
 #include <iostream>
+#include <queue>
+
 using namespace std;
 
 class Kucharz:public Pracownik
 {
     public:
         Kucharz();
+        Kucharz(int, string, string);
         virtual ~Kucharz();
         //strumien zapisz(strumien);
         //strumien wczytaj(strumien);
@@ -28,14 +30,20 @@ class Kucharz:public Pracownik
         string getNazwisko();
         int getZlecenie();
 
-    protected:
+        friend ostream& operator<<(ostream&, const Kucharz&);
+        friend istream& operator>>(istream&,  Kucharz&);
 
-    private:
         int id;
         string imie;
         string nazwisko;
+
+    //typedef priority_queue < SOsoba, std::vector < SOsoba >, PorownajOsoby > TKolejkaPriorytetowaOsob;
+
+    protected:
+
+    private:
         int zlecenie;
-        Zadanie zadanie;
+        Zadanie *zadanie;
 };
 
 #endif // KUCHARZ_H

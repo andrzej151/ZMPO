@@ -10,19 +10,19 @@ Stolik::~Stolik()
     //nothing
 }
 
-Kelner::edytuj()
+void Stolik::edytuj()
 {
     //TODO tu cos prostego
-    cin << stan;
-    setStan(stan);
+    //cin >> stan;
+    //setStan(stan);
 }
 
-Stolik::setStan(bool czyWolny)
+void Stolik::setStan(bool czyWolny)
 {
     this -> czyWolny = czyWolny;
 }
 
-Stolik::getStan()
+bool Stolik::getStan()
 {
     return czyWolny;
 }
