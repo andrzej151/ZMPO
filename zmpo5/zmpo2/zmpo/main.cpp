@@ -862,11 +862,231 @@ int menu()
     return x;
 }
 
+void clear_screen()
+{
+#ifdef WINDOWS
+    std::system("cls");
+#else
+    // Assume POSIX
+    std::system ("clear");
+#endif
+}
+
+void TUI() //Text User Interface
+{
+    unsigned int x;
+    string y;
+    string z;
+
+    do {
+        clear_screen();
+
+        printf("\n\n * KUCHARZE\n");
+        printf("%3d - %50s",1,"dodaj");
+        printf("%3d - %50s",2,"pokaż");
+        printf("%3d - %50s",3,"edytuj");
+        printf("%3d - %50s",4,"usuń");
+
+        printf("\n\n * KELNERZY\n");
+        printf("%3d - %50s",5,"dodaj");
+        printf("%3d - %50s",6,"pokaż");
+        printf("%3d - %50s",7,"edytuj");
+        printf("%3d - %50s",8,"usuń");
+
+        printf("\n\n * STOLIKI\n");
+        printf("%3d - %50s",9,"dodaj");
+        printf("%3d - %50s",10,"pokaż");
+        printf("%3d - %50s",11,"edytuj");
+        printf("%3d - %50s",12,"usuń");
+
+        cin >> x;
+
+        switch(x)
+        {
+            /** Kucharze **/
+            case  1 :
+                do
+                {
+                    printf("\n * * Podaj imię n");
+                    cin >> y;
+                } while (y != "");
+
+                do
+                {
+                    printf("\n * * Podaj nazwisko n");
+                    cin >> z;
+                } while (z != "");
+
+//                dodajKucharza(Kucharz(kucharze.at(kucharze.size()-1).getId()+1,y,z));
+                break;
+
+            case  2 :
+                do
+                {
+                    printf("\n * * Którego kucharza chcesz zobaczyć?");
+                    cin >> x;
+                    /*if (x > 0 && x <= kucharze.size())
+                    {
+                        pokazKucharza(x - 1);
+                        printf("\n Kucharz pokazany pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas pokazywania");*/
+                } while (x != 0);
+                break;
+
+            case  3 :
+                do
+                {
+                    printf("\n * * Którego kucharza chcesz edytować?");
+                    cin >> x;
+                   /* if (x > 0 && x <= kucharze.size())
+                    {
+                        edytujKucharza(x - 1);
+                        printf("\n Kucharz edytowany pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas edytowania");*/
+                } while (x != 0);
+                break;
+
+            case  4 :
+                do
+                {
+                    printf("\n * * Którego kucharza chcesz usunąć?");
+                    cin >> x;
+                   /* if (x > 0 && x <= kucharze.size())
+                    {
+                        usunKucharza(x - 1);
+                        printf("\n Kucharz usunięty pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas usuwania");*/
+                } while (x != 0);
+                break;
+
+            /** Kelnerzy **/
+            case  5 :
+                do
+                {
+                    printf("\n * * Podaj imię n");
+                    cin >> y;
+                } while (y != "");
+
+                do
+                {
+                    printf("\n * * Podaj nazwisko n");
+                    cin >> z;
+                } while (z != "");
+
+//                dodajKelnera(Kelner(kelnerzy.at(kelnerzy.size()-1).getId()+1,y,z));
+                break;
+
+            case  6 :
+                do
+                {
+                    printf("\n * * Którego kelnera chcesz zobaczyć?");
+                    cin >> x;
+                   /* if (x > 0 && x <= kelnerzy.size())
+                    {
+                        pokazKelnera(x - 1);
+                        printf("\n Kelner pokazany pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas pokazywania");*/
+                } while (x != 0);
+                break;
+
+            case  7 :
+                do
+                {
+                    printf("\n * * Którego kelnera chcesz edytować?");
+                    cin >> x;
+/*                    if (x > 0 && x <= kelnerzy.size())
+                    {
+                        edytujKelnera(x - 1);
+                        printf("\n Kelner edytowany pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas edytowania");*/
+                } while (x != 0);
+                break;
+
+            case  8 :
+                do
+                {
+                    printf("\n * * Którego kelnera chcesz usunąć?");
+                    cin >> x;
+                   /* if (x > 0 && x <= kelnerzy.size())
+                    {
+                        usunKelnera(x - 1);
+                        printf("\n Kelner usunięty pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas usuwania");*/
+                } while (x != 0);
+                break;
+
+            /** Stoliki **/
+            case  9 :
+//                dodajStolik();
+                break;
+
+            case 10 :
+                do
+                {
+                    printf("\n * * Który stolik chcesz zobaczyć?");
+                    cin >> x;
+                 /*   if (x > 0 && x <= stoliki.size())
+                    {
+                        pokazStolik(x - 1);
+                        printf("\n Stolik pokazany pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas pokazywania");*/
+                } while (x != 0);
+                break;
+
+            case 11 :
+                do
+                {
+                    printf("\n * * Który stolik chcesz edytować?");
+                    cin >> x;
+                   /* if (x > 0 && x <= stoliki.size())
+                    {
+                        edytujStolik(x - 1);
+                        printf("\n Stolik edytowany pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas edytowania");*/
+                } while (x != 0);
+                break;
+
+            case 12 :
+                do
+                {
+                    printf("\n * * Który stolik chcesz usunąć?");
+                    cin >> x;
+               /*     if (x > 0 && x <= stoliki.size())
+                    {
+                        usunStolik(x - 1);
+                        printf("\n Stolik usunięty pomyślnie");
+                    }
+                    else
+                        printf("\n Błąd podczas usuwania");*/
+                } while (x != 0);
+                break;
+        }
+    } while (x != 0);
+}
+
+/****************************************************/
 
 int main() {
 
 int x;
     Obsluga o;
+    TUI();
     Pozycja p;
     Menu m;
     m.wyswietl();
