@@ -5,6 +5,12 @@ Stolik::Stolik()
     czyWolny = true;
 }
 
+Stolik::Stolik(int Id)
+    {
+        id=Id;
+        czyWolny = true;
+    }
+
 Stolik::~Stolik()
 {
     //nothing
@@ -29,7 +35,7 @@ void Stolik::setListeZyczen(ListaZyczen Lista)
  void Stolik::wyswietl()
     {
         cout<<"Stolik "<<id<<endl;
-        if(czyWolny)
+        if(!czyWolny)
         {
             lista.wyswietl();
         }

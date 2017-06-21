@@ -12,6 +12,7 @@ class Stolik
 {
     public:
         Stolik();
+        Stolik(int Id);
         virtual ~Stolik();
         string toString();
         void wyswietl();
