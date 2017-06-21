@@ -1,82 +1,109 @@
 #include "Pozycja.h"
 
+Pozycja::Pozycja()
+{
+    nazwa = "";
+    id = 0;
+    czas = 2;
+    cena = 0.0f;
+}
 
+Pozycja::Pozycja(int Id, string Nazwa, int Czas, float Cena )
+{
+    nazwa = Nazwa;
+    id = Id;
+    czas = Czas;
+    cena = Cena;
+}
 
-    Pozycja::Pozycja()
+Pozycja::~Pozycja()
+{
+    //dtor
+}
+
+void Pozycja::edytuj()
+{
+    string x;
+    float y;
+    int z;
+    do
     {
-        nazwa = "";
-        id = 0;
-        czas = 2;
-        cena = 0;
-    }
+        printf("\n * * Podaj nazwe :\n");
+        cin >> x;
+    } while (x == "");
+    setNazwa(x);
 
-    Pozycja::Pozycja(string Nazwa, int Id, int Czas, float Cena )
+    do
     {
-        nazwa = Nazwa;
-        id = Id;
-        czas = Czas;
-        cena = Cena;
-     }
+        printf("\n * * Podaj czas :\n");
+        cin >> y;
+    } while (y < 0);
+    setCzas(y);
 
-     void Pozycja::setId(int Id)
-     {
-     id=Id;
-     }
-
-     int Pozycja::getId()
-     {
-         return id;
-     }
-
-     void Pozycja::setCzas(int Czas)
-     {
-        czas=Czas;
-     }
-
-     int Pozycja::getCzas()
-     {
-        return czas;
-     }
-
-     void Pozycja::setNazwa(string Nazwa)
-     {
-        nazwa=Nazwa;
-     }
-
-     string Pozycja::getNazwa()
-     {
-        return nazwa;
-     }
-
-     void Pozycja::setCena(float Cena)
-     {
-        cena=Cena;
-     }
-
-     float Pozycja::getCena()
-     {
-        return cena;
-     }
-
-
-     void Pozycja::wykonaj()
+    do
     {
-        if(czyMoznaWykonac())
-        czas--;
-    }
+        printf("\n * * Podaj cene :\n");
+        cin >> z;
+    } while (z <= 0);
+    setCzas(z);
+}
 
-     bool Pozycja::czyMoznaWykonac()
-    {
-        return czas>0;
+void Pozycja::setNazwa(string nazwa)
+{
+    this -> nazwa = nazwa;
+}
 
-    }
+void Pozycja::setId(int id)
+{
+    this -> id = id;
+}
 
-    void Pozycja::wyswietl()
-    {
-        cout<<id<<" "<<nazwa<<" "<<cena<<" PLN ";
-        if(czas>0)
-            cout<<"("<<czas<<")"<<endl;
-        else
-            cout<<"wykonano"<<endl;
+void Pozycja::setCena(float cena)
+{
+    this -> cena = cena;
+}
 
-    }
+void Pozycja::setCzas(int czas)
+{
+    this->czas = czas;
+}
+
+string Pozycja::getNazwa()
+{
+    return nazwa;
+}
+
+int Pozycja::getId()
+{
+    return id;
+}
+
+float Pozycja::getCena()
+{
+    return cena;
+}
+
+int Pozycja::getCzas()
+{
+    return czas;
+}
+
+void Pozycja::wykonaj()
+{
+    if(czyMoznaWykonac())
+    czas--;
+}
+
+bool Pozycja::czyMoznaWykonac()
+{
+    return czas>0;
+}
+
+void Pozycja::wyswietl()
+{
+    cout<<id<<" "<<nazwa<<" "<<cena<<" PLN ";
+    if(czas>0)
+        cout<<"("<<czas<<")"<<endl;
+    else
+        cout<<"wykonano"<<endl;
+}

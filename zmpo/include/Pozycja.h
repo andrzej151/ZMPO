@@ -1,34 +1,43 @@
 #ifndef POZYCJA_H
 #define POZYCJA_H
-
-#include "Zadanie.h"
 #include <iostream>
 #include <string>
+#include "Zadanie.h"
+#include <stdio.h>
 
 using namespace std;
 
 
 class Pozycja:public Zadanie
 {
-    string nazwa;
-    int    id, czas;
-    float cena;
-    //get set zapis wczytaj
     public:
-    Pozycja();
-    Pozycja(string Nazwa, int Id, int Czas, float Cena );
-     void setId(int Id);
-     int getId();
-     void setCzas(int Czas);
-     int getCzas();
-     void setNazwa(string Nazwa);
-     string getNazwa();
-     void setCena(float Cena);
-     float getCena();
-    virtual void wykonaj();
-    virtual bool czyMoznaWykonac();
-    void wyswietl();
+        Pozycja();
+        Pozycja(int , string , int , float);
+        virtual ~Pozycja();
 
+        string nazwa;
+        int id;
+        int czas;
+        float cena;
+
+        virtual void wykonaj();
+        virtual bool czyMoznaWykonac();
+        void edytuj();
+        void wyswietl();
+
+        void setNazwa(string);
+        void setId(int);
+        void setCena(float);
+        void setCzas(int);
+
+        int getId();
+        string getNazwa();
+        float getCena();
+        int getCzas();
+
+    protected:
+
+    private:
 };
 
 #endif // POZYCJA_H

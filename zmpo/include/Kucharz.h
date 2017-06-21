@@ -7,6 +7,7 @@
 #include <iostream>
 #include <queue>
 #include <sstream>
+#include <stdio.h>
 
 using namespace std;
 

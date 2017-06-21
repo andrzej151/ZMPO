@@ -55,21 +55,32 @@ class Main
         void edytujKelnera(int);
         void usunKelnera(int);
 
+        vector<Pozycja> menu;
+        void dodajPozycje(Pozycja);
+        void pokazPozycje(int);
+        void edytujPozycje(int);
+        void usunPozycje(int);
+
         vector<Stolik> stoliki;
         void dodajStolik();
         void pokazStolik(int);
         void edytujStolik(int);
         void usunStolik(int);
 
-
         bool zapiszKelnerow();
         bool wczytajKelnerow();
         void wpiszKelnerow();
         void wyswietlListeKelnerow();
+
         bool zapiszKucharzy();
         bool wczytajKucharzy();
         void wpiszKucharzy();
         void wyswietlListeKucharzy();
+
+        bool zapiszMenu();
+        bool wczytajMenu();
+        void wpiszMenu();
+        void wyswietlMenu();
 
         bool zapiszStoliki();
         bool wczytajStoliki();

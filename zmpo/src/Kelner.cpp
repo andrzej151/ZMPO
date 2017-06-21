@@ -19,13 +19,20 @@ Kelner::~Kelner()
 
 void Kelner::edytuj()
 {
-    //TODO proponuje dodac switch/case pytajacy co zmienic i wywolywac funkcje zmiany; eq.
-    cin >> id;
-    setId(id);
-    cin >> imie;
-    setImie(imie);
-    cin >> nazwisko;
-    setNazwisko(nazwisko);
+    string x;
+    do
+    {
+        printf("\n * * Podaj imie :\n");
+        cin >> x;
+    } while (x == "");
+    setImie(x);
+
+    do
+    {
+        printf("\n * * Podaj nazwisko :\n");
+        cin >> x;
+    } while (x == "");
+    setNazwisko(x);
 }
 
 void Kelner::setId(int id)
