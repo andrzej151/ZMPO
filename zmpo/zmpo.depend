@@ -59,7 +59,7 @@
 	"Zadanie.h"
 	<string>
 
-1498047421 c:\users\marik\desktop\git\zmpo\zmpo\include\main.h
+1498058049 c:\users\marik\desktop\git\zmpo\zmpo\include\main.h
 	<iostream>
 	<string>
 	<fstream>
@@ -100,7 +100,7 @@
 	"Kelner.h"
 	"main.h"
 
-1498055472 source:c:\users\marik\desktop\git\zmpo\zmpo\src\main.cpp
+1498058135 source:c:\users\marik\desktop\git\zmpo\zmpo\src\main.cpp
 	"Main.h"
 
 1497827026 source:c:\users\marik\desktop\git\zmpo\zmpo\src\menu.cpp

@@ -44,7 +44,11 @@ int x=0;
 string s="";
 
 do{
-        system( "cls" );
+#ifdef __linux__
+std::system ("clear");
+#elif _WIN32
+std::system("cls");
+#endif
         cout<<"podaj id"<<endl;
      if (!str) {
             // wazna kolejnosc!
@@ -56,7 +60,11 @@ do{
     k.setId(x);
 
 do{
-    system( "cls" );
+#ifdef __linux__
+std::system ("clear");
+#elif _WIN32
+std::system("cls");
+#endif
         cout<<"podaj imie"<<endl;
      if (!str) {
             // wazna kolejnosc!
@@ -127,39 +135,44 @@ do{
 
 
 Main::Main() {
-    int x;
+/*    int x;
     wczytajKelnerow();
-//    wyswietlListeKelnerow();
-//    cin>>x;
+    wyswietlListeKelnerow();
+    cin>>x;
 
     wczytajKucharzy();
-//    wyswietlListekucharzow();
-//    cin>>x;
+    wyswietlListeKucharzy();
+    cin>>x;
 
     //kelnerzy
-//    wpiszKelnerow();
-//    wyswietlListeKelnerow();
-//    zapiszKelnerow();
-//    wczytajKelnerow();
-//    wyswietlListeKelnerow();
+    wpiszKelnerow();
+    wyswietlListeKelnerow();
+    zapiszKelnerow();
+    wczytajKelnerow();
+    wyswietlListeKelnerow();
     //kucharze
 
-//    wpiszkucharzow();
-//    wyswietlListekucharzow();
-//    zapiszKucharzy();
-//    wczytajKucharzy();
-//    wyswietlListekucharzow();
+    wpiszKucharzy();
+    wyswietlListeKucharzy();
+    zapiszKucharzy();
+    wczytajKucharzy();
+    wyswietlListeKucharzy();*/
 
+    wczytajKelnerow();
+    wczytajKucharzy();
+    wczytajStoliki();
     TUI();
+    zapiszKelnerow();
+    zapiszKucharzy();
+    zapiszStoliki();
 }
 
 void Main::clear_screen()
 {
 #ifdef __linux__
-    std::system ("clear");
+std::system ("clear");
 #elif _WIN32
-    std::system("cls");
-#else cout << endl;
+std::system("cls");
 #endif
 }
 
@@ -386,7 +399,7 @@ void Main::TUI() //Text User Interface
                 x = -1; break;
 
             case 13 : /** Kucharze **/
-                wyswietlListekucharzow();
+                wyswietlListeKucharzy();
                 cin >> a;
                 break;
 
@@ -494,7 +507,7 @@ bool Main::wczytajKelnerow()
     ifstream plik("kelnerzy.txt");
     int x=0;
     do{
-        system( "cls" );
+        clear_screen();
          if (!plik) {
             // wazna kolejnosc!
             plik.clear();
@@ -517,7 +530,7 @@ void Main::wpiszKelnerow()
     int x=0;
 
     do{
-        system( "cls" );
+        clear_screen();
         cout<<"ilu kelnerow chcesz wpisac"<<endl;
         if (!cin) {
             // wazna kolejnosc!
@@ -561,7 +574,7 @@ bool Main::wczytajKucharzy()
     ifstream plik("kucharze.txt");
     int x=0;
     do{
-        system( "cls" );
+        clear_screen();
         if (!plik) {
             // wazna kolejnosc!
             plik.clear();
@@ -580,12 +593,12 @@ bool Main::wczytajKucharzy()
 
 }
 
-void Main::wpiszkucharzow()
+void Main::wpiszKucharzy()
 {
     int x=0;
 
     do{
-        system( "cls" );
+        clear_screen();
         cout<<"ilu Kucharzy chcesz wpisac"<<endl;
         if (!cin) {
             // wazna kolejnosc!
@@ -603,7 +616,7 @@ void Main::wpiszkucharzow()
     }
 }
 
-void Main::wyswietlListekucharzow()
+void Main::wyswietlListeKucharzy()
 {
     cout << "lista Kucharzy"<<endl;
     for( int i = 0; i < kucharze.size(); i++ )
@@ -611,3 +624,40 @@ void Main::wyswietlListekucharzow()
         cout << kucharze[ i ] ;
     }
 }
+
+
+
+
+
+
+bool Main::zapiszStoliki()
+{
+    ofstream plik("stoliki.txt");
+    plik<<stoliki.size()<<endl;
+    plik.close();
+}
+
+bool Main::wczytajStoliki()
+{
+    ifstream plik("stoliki.txt");
+    int x=0;
+    do{
+        clear_screen();
+         if (!plik) {
+            // wazna kolejnosc!
+            plik.clear();
+            plik.ignore(1024,'\n');
+        };
+        plik >> x;
+    } while (!plik);
+
+    for(int i=0;i<x;i++)
+    {
+        Stolik s;
+        stoliki.push_back(s);
+    }
+    plik.close();
+}
+
+
+

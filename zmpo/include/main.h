@@ -68,8 +68,11 @@ class Main
         void wyswietlListeKelnerow();
         bool zapiszKucharzy();
         bool wczytajKucharzy();
-        void wpiszkucharzow();
-        void wyswietlListekucharzow();
+        void wpiszKucharzy();
+        void wyswietlListeKucharzy();
+
+        bool zapiszStoliki();
+        bool wczytajStoliki();
 };
 
 #endif // MAIN_H
