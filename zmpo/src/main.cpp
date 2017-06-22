@@ -272,6 +272,9 @@ void Main::TUI() //Text User Interface
         printf("%3d - %-20s\n",18,"Kelnerzy");
         printf("%3d - %-20s\n",19,"Stoliki");
         printf("%3d - %-20s\n",20,"Menu");
+
+        printf("\n * OBSLUGA\n");
+        printf("%3d - %-20s\n",21,"Symulacja");
         cout << endl;
 
         cin >> x;
@@ -545,9 +548,30 @@ void Main::TUI() //Text User Interface
                 cin >> a;
                 break;
 
+             case 21 : /** Symulacja **/
+                symulacja();
+                break;
+
         }
     } while (x != 0);
 }
+/**********************Symulacja*********************************/
+
+void Main::symulacja()
+{
+    int x = 0;
+    Symulacja symulacja;
+    queue <ListaZyczen> kolejkaZamowien;
+    symulacja.init(kelnerzy, kucharze, stoliki, kolejkaZamowien);
+    do
+    {
+        x = symulacja.menu();
+        symulacja.wykonaj(x);
+
+    }while(x!=0);
+}
+
+
 
 /****************************************************/
 Main::~Main()
