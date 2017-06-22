@@ -9,6 +9,10 @@ ListaZyczen::ListaZyczen()
 
 
 
+    void ListaZyczen::operator=(ListaZyczen c)
+    {
+
+    }
     void ListaZyczen::setPozycje(Pozycja p)
     {
         listaPozycji.push_back(p);

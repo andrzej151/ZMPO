@@ -24,6 +24,7 @@
 #include "Pozycja.h"
 #include "Pracownik.h"
 #include "Rozlicz.h"
+#include "Symulacja.h"
 
 struct SOsoba;
 struct PorownajOsoby;
@@ -84,6 +85,8 @@ class Main
 
         bool zapiszStoliki();
         bool wczytajStoliki();
+
+        void symulacja();
 };
 
 #endif // MAIN_H

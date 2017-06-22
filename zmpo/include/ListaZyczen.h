@@ -19,6 +19,7 @@ class ListaZyczen:public Zadanie
     virtual void wykonaj();
     virtual bool czyMoznaWykonac();
     void wyswietl();
+    void operator=(ListaZyczen);
 
     protected:
 

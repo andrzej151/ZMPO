@@ -7,7 +7,7 @@
 
 #pragma once
 #define pojemnosc 4   //zdefiniowana z góry pojemnoœæ kolejki(nie musi byæ du¿a, bo to tylko przyk³ad)
-
+/*
 using namespace std;
 
 template < class T > class kolejka
@@ -96,5 +96,6 @@ template < class T > T kolejka < T >::front()
 template < class T > kolejka < T >::~kolejka()
 {
     delete[] values; //destruktor zwalniaj¹cy przypisan¹ pamiêæ
-}
+}*/
 #endif // KOLEJKA_H
+

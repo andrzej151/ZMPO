@@ -243,35 +243,18 @@ void Main::TUI() //Text User Interface
     do {
         clear_screen();
 
-        printf("\n * KUCHARZE\n");
-        printf("%3d - %-20s\n",1,"dodaj");
-        printf("%3d - %-20s\n",2,"pokaz");
-        printf("%3d - %-20s\n",3,"edytuj");
-        printf("%3d - %-20s\n",4,"usun");
+        printf("\n * %-20s * %-20s * %-20s * %-20s\n",              "KUCHARZE", "KELNERZY", "STOLIKI",   "MENU");
+        printf("%2d - %-17s %2d - %-17s %2d - %-17s %2d - %-17s\n", 1,"dodaj",  5,"dodaj",   9,"dodaj",  13,"dodaj");
+        printf("%2d - %-17s %2d - %-17s %2d - %-17s %2d - %-17s\n", 2,"pokaz",  6,"pokaz",  10,"pokaz",  14,"pokaz");
+        printf("%2d - %-17s %2d - %-17s %2d - %-17s %2d - %-17s\n", 3,"edytuj", 7,"edytuj", 11,"edytuj", 15,"edytuj");
+        printf("%2d - %-17s %2d - %-17s %2d - %-17s %2d - %-17s\n", 4,"usun",   8,"usun",   12,"usun",   16,"usun");
 
-        printf("\n * KELNERZY\n");
-        printf("%3d - %-20s\n",5,"dodaj");
-        printf("%3d - %-20s\n",6,"pokaz");
-        printf("%3d - %-20s\n",7,"edytuj");
-        printf("%3d - %-20s\n",8,"usun");
+        printf("\n * %-20s * %-20s\n",      "LISTY",         "OBSLUGA");
+        printf("%2d - %-17s %2d - %-17s\n", 17,"Kucharze",   21,"Symulacja");
+        printf("%2d - %-20s\n",             18,"Kelnerzy");
+        printf("%2d - %-20s\n",             19,"Stoliki");
+        printf("%2d - %-20s\n",             20,"Menu");
 
-        printf("\n * STOLIKI\n");
-        printf("%3d - %-20s\n",9,"dodaj");
-        printf("%3d - %-20s\n",10,"pokaz");
-        printf("%3d - %-20s\n",11,"edytuj");
-        printf("%3d - %-20s\n",12,"usun");
-
-        printf("\n * MENU\n");
-        printf("%3d - %-20s\n",13,"dodaj");
-        printf("%3d - %-20s\n",14,"pokaz");
-        printf("%3d - %-20s\n",15,"edytuj");
-        printf("%3d - %-20s\n",16,"usun");
-
-        printf("\n * LISTY\n");
-        printf("%3d - %-20s\n",17,"Kucharze");
-        printf("%3d - %-20s\n",18,"Kelnerzy");
-        printf("%3d - %-20s\n",19,"Stoliki");
-        printf("%3d - %-20s\n",20,"Menu");
         cout << endl;
 
         cin >> x;
@@ -545,9 +528,54 @@ void Main::TUI() //Text User Interface
                 cin >> a;
                 break;
 
+             case 21 : /** Symulacja **/
+                symulacja();
+                break;
+
         }
     } while (x != 0);
 }
+/**********************Symulacja*********************************/
+
+void Main::symulacja()
+{
+    int x = 0;
+    Symulacja symulacja;
+    queue <ListaZyczen> kolejkaZamowien;
+    ListaZyczen f,g,h,i,j;
+
+    Pozycja a(1,"Piizza 1",20,12.50);
+    Pozycja b(2,"Piizza 2",20,12.50);
+    Pozycja c(3,"Piizza 3",20,12.50);
+    Pozycja d(4,"Piizza 4",20,12.50);
+
+    f.setPozycje(a);
+    g.setPozycje(b);
+    g.setPozycje(c);
+    h.setPozycje(d);
+    i.setPozycje(a);
+    i.setPozycje(b);
+    i.setPozycje(c);
+    j.setPozycje(d);
+    j.setPozycje(a);
+
+    kolejkaZamowien.push(f);
+    kolejkaZamowien.push(g);
+    kolejkaZamowien.push(h);
+    kolejkaZamowien.push(i);
+    kolejkaZamowien.push(j);
+
+
+    symulacja.init(kelnerzy, kucharze, stoliki, kolejkaZamowien);
+    do
+    {
+        x = symulacja.menu();
+        symulacja.wykonaj(x);
+
+    }while(x!=0);
+}
+
+
 
 /****************************************************/
 Main::~Main()
