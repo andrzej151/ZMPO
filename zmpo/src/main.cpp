@@ -40,7 +40,7 @@ ostream& operator<<(ostream& str, const Kelner& k) {
 }
 
 ostream& operator<<(ostream& str, const Pozycja& p) {
-    return str << p.id << " " << p.nazwa << " " << p.cena << " " << p.czas << endl;
+    return str << p.id << " " << p.nazwa << " " << p.czas << " " << p.cena << endl;
 }
 
 istream& operator>>(istream& str,  Kucharz& k) {
@@ -171,6 +171,18 @@ do{
     p.setNazwa(s);
 
     do{
+        system( "cls" );
+        cout<<"podaj czas"<<endl;
+     if (!str) {
+            // wazna kolejnosc!
+            str.clear();
+            str.ignore(1024,'\n');
+        };
+        str >> x;
+    } while (!str);
+    p.setCzas(x);
+
+    do{
     system( "cls" );
         cout<<"podaj cene"<<endl;
      if (!str) {
@@ -182,17 +194,6 @@ do{
     } while (!str);
     p.setCena(f);
 
-    do{
-        system( "cls" );
-        cout<<"podaj czas"<<endl;
-     if (!str) {
-            // wazna kolejnosc!
-            str.clear();
-            str.ignore(1024,'\n');
-        };
-        str >> x;
-    } while (!str);
-    p.setCzas(x);
     system( "cls" );
     return str;
 }
@@ -236,8 +237,8 @@ void Main::TUI() //Text User Interface
     string y;
     string z;
     string a;
-    float b;
-    int c;
+    int b;
+    float c;
 
     do {
         clear_screen();
@@ -477,12 +478,12 @@ void Main::TUI() //Text User Interface
             case 14 : /** pokaz **/
                 do
                 {
-                    printf("\n * * Ktora pozycje chcesz edytowac? 1 - %3d\n",menu.size());
+                    printf("\n * * Ktora pozycje chcesz pokazac? 1 - %3d\n",menu.size());
                     cin >> x;
                     if (x > 0 && x <= menu.size())
                     {
-                        edytujPozycje(x - 1);
-                        printf("\n Pozycja edytowany pomyslnie.\n");
+                        pokazPozycje(x - 1);
+                        printf("\n Pozycja pokazana pomyslnie.\n");
                     }
                     else
                         printf("\n Blad podczas edytowania.\n");

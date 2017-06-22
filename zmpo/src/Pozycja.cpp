@@ -24,8 +24,8 @@ Pozycja::~Pozycja()
 void Pozycja::edytuj()
 {
     string x;
-    float y;
-    int z;
+    int y;
+    float z;
     do
     {
         printf("\n * * Podaj nazwe :\n");
@@ -45,7 +45,7 @@ void Pozycja::edytuj()
         printf("\n * * Podaj cene :\n");
         cin >> z;
     } while (z <= 0);
-    setCzas(z);
+    setCena(z);
 }
 
 void Pozycja::setNazwa(string nazwa)
