@@ -20,9 +20,12 @@ std::system("cls");
 }
 
 
-void Symulacja::init(vector<Kelner>&, vector<Kucharz>&, vector<Stolik>&, queue<ListaZyczen>&)
+void Symulacja::init(vector<Kelner>& ke, vector<Kucharz>& ku, vector<Stolik>& st, queue<ListaZyczen>& ko)
 {
-
+    kelnerzy = ke;
+    kucharze = ku;
+    stoliki = st;
+    kolejka = ko;
 
 }
 
@@ -45,10 +48,68 @@ int Symulacja::menu()
        }while(!cin|x<0|x>2);
     return x;
 }
+////////////////wyswietlanie
+/*
+void Symulacja::wyswietlListeKucharzy()
+{
+    cout << "lista Kucharzy"<<endl;
+    for( int i = 0; i < kucharze.size(); i++ )
+    {
+        cout << kucharze[ i ] ;
+    }
+}
 
+void Symulacja::wyswietlListeKelnerow()
+{
+    cout<<"lista Kelnerow"<<endl;
+    for( unsigned int i = 0; i < kelnerzy.size(); i++ )
+    {
+        cout << kelnerzy[ i ] ;
+    }
+}
+*/
+
+
+
+
+void Symulacja::wyswietl(int x)
+{
+
+}
+/////////////////////////////////////
 string Symulacja::nowyKlient()
 {
-    return "dodano ";
+    int i = 0;
+
+    while(i<stoliki.size()&&!stoliki[i].getStan())
+    {
+        i++;
+    }
+    if(i<stoliki.size())
+    {
+        string komunikat= "dodano kilienta do stolika ";
+        if( kolejka.empty() == false )
+        {
+
+///////////////////////TTTTTTTTTTTUUUUUUUUUUUUUUUUUJJJJJJJest problem
+///            stoliki[i].setListeZyczen(kolejka.pop());
+
+            ostringstream ss;
+            ss << i;
+            komunikat+= ss.str();
+        }
+        else
+        {
+            komunikat = "kolejka pusta ";
+        }
+        wyswietl(1);
+
+     return komunikat;
+    }
+    else
+    {
+        return "nie ma wolnych stolikow";
+    }
 }
 
 string Symulacja::nowyStan()

@@ -562,6 +562,30 @@ void Main::symulacja()
     int x = 0;
     Symulacja symulacja;
     queue <ListaZyczen> kolejkaZamowien;
+    ListaZyczen f,g,h,i,j;
+
+    Pozycja a(1,"Piizza 1",20,12.50);
+    Pozycja b(2,"Piizza 2",20,12.50);
+    Pozycja c(3,"Piizza 3",20,12.50);
+    Pozycja d(4,"Piizza 4",20,12.50);
+
+    f.setPozycje(a);
+    g.setPozycje(b);
+    g.setPozycje(c);
+    h.setPozycje(d);
+    i.setPozycje(a);
+    i.setPozycje(b);
+    i.setPozycje(c);
+    j.setPozycje(d);
+    j.setPozycje(a);
+
+    kolejkaZamowien.push(f);
+    kolejkaZamowien.push(g);
+    kolejkaZamowien.push(h);
+    kolejkaZamowien.push(i);
+    kolejkaZamowien.push(j);
+
+
     symulacja.init(kelnerzy, kucharze, stoliki, kolejkaZamowien);
     do
     {

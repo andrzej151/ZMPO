@@ -38,6 +38,7 @@ class Symulacja
 
         vector<Stolik> stoliki;
         queue <ListaZyczen> kolejka;
+        void wyswietl(int);
 
 };
 
