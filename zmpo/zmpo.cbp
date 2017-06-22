@@ -39,6 +39,11 @@
 		<Unit filename="include/Kucharz.h" />
 		<Unit filename="include/Lanczyk.h" />
 		<Unit filename="include/ListaZyczen.h" />
+<<<<<<< HEAD
+=======
+		<Unit filename="include/Menu.h" />
+		<Unit filename="include/Obsluga.h" />
+>>>>>>> c049e6428f21ca71cf79ddb5098d1f6547fcd605
 		<Unit filename="include/Pozycja.h" />
 		<Unit filename="include/Pracownik.h" />
 		<Unit filename="include/Rozlicz.h" />
@@ -53,6 +58,11 @@
 		<Unit filename="src/Kucharz.cpp" />
 		<Unit filename="src/Lanczyk.cpp" />
 		<Unit filename="src/ListaZyczen.cpp" />
+<<<<<<< HEAD
+=======
+		<Unit filename="src/Menu.cpp" />
+		<Unit filename="src/Obsluga.cpp" />
+>>>>>>> c049e6428f21ca71cf79ddb5098d1f6547fcd605
 		<Unit filename="src/Pozycja.cpp" />
 		<Unit filename="src/Pracownik.cpp" />
 		<Unit filename="src/Rozlicz.cpp" />

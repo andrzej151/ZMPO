@@ -243,6 +243,7 @@ void Main::TUI() //Text User Interface
     do {
         clear_screen();
 
+<<<<<<< HEAD
         printf("\n * %-20s * %-20s * %-20s * %-20s\n",              "KUCHARZE", "KELNERZY", "STOLIKI",   "MENU");
         printf("%2d - %-17s %2d - %-17s %2d - %-17s %2d - %-17s\n", 1,"dodaj",  5,"dodaj",   9,"dodaj",  13,"dodaj");
         printf("%2d - %-17s %2d - %-17s %2d - %-17s %2d - %-17s\n", 2,"pokaz",  6,"pokaz",  10,"pokaz",  14,"pokaz");
@@ -255,6 +256,40 @@ void Main::TUI() //Text User Interface
         printf("%2d - %-20s\n",             19,"Stoliki");
         printf("%2d - %-20s\n",             20,"Menu");
 
+=======
+        printf("\n * KUCHARZE\n");
+        printf("%3d - %-20s\n",1,"dodaj");
+        printf("%3d - %-20s\n",2,"pokaz");
+        printf("%3d - %-20s\n",3,"edytuj");
+        printf("%3d - %-20s\n",4,"usun");
+
+        printf("\n * KELNERZY\n");
+        printf("%3d - %-20s\n",5,"dodaj");
+        printf("%3d - %-20s\n",6,"pokaz");
+        printf("%3d - %-20s\n",7,"edytuj");
+        printf("%3d - %-20s\n",8,"usun");
+
+        printf("\n * STOLIKI\n");
+        printf("%3d - %-20s\n",9,"dodaj");
+        printf("%3d - %-20s\n",10,"pokaz");
+        printf("%3d - %-20s\n",11,"edytuj");
+        printf("%3d - %-20s\n",12,"usun");
+
+        printf("\n * MENU\n");
+        printf("%3d - %-20s\n",13,"dodaj");
+        printf("%3d - %-20s\n",14,"pokaz");
+        printf("%3d - %-20s\n",15,"edytuj");
+        printf("%3d - %-20s\n",16,"usun");
+
+        printf("\n * LISTY\n");
+        printf("%3d - %-20s\n",17,"Kucharze");
+        printf("%3d - %-20s\n",18,"Kelnerzy");
+        printf("%3d - %-20s\n",19,"Stoliki");
+        printf("%3d - %-20s\n",20,"Menu");
+
+        printf("\n * OBSLUGA\n");
+        printf("%3d - %-20s\n",21,"Symulacja");
+>>>>>>> c049e6428f21ca71cf79ddb5098d1f6547fcd605
         cout << endl;
 
         cin >> x;

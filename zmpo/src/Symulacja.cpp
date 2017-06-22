@@ -88,11 +88,19 @@ string Symulacja::nowyKlient()
     if(i<stoliki.size())
     {
         string komunikat= "dodano kilienta do stolika ";
+<<<<<<< HEAD
         if( !kolejka.empty() )
         {
             stoliki.at(i).setListeZyczen(kolejka.front());
             kolejka.pop();
             //Dziala, ale stoliki zajmowane s¹ 0,1,3,4,5. Stolik 2 nie ma statusu?
+=======
+        if( kolejka.empty() == false )
+        {
+
+///////////////////////TTTTTTTTTTTUUUUUUUUUUUUUUUUUJJJJJJJest problem
+///            stoliki[i].setListeZyczen(kolejka.pop());
+>>>>>>> c049e6428f21ca71cf79ddb5098d1f6547fcd605
 
             ostringstream ss;
             ss << i;
